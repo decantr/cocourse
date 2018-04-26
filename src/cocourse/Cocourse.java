@@ -6,16 +6,25 @@
 package cocourse;
 
 /**
- *
  * @author decanter
  */
 public class Cocourse {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+	/**
+	 * @param args the command line arguments
+	 */
+	public static void main( String[] args ) {
+		// TODO code application logic here
+
+		// for testing
+
+
+//		if ( args.length > 0 )
+			new ServerBack().create( Integer.parseInt(
+//					args[1]
+			"" + 8182
+			) );
+
+	}
+
 }
