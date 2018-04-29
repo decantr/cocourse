@@ -20,7 +20,7 @@ public class Cocourse {
 
 
 //		if ( args.length > 0 )
-			new ServerBack(Integer.parseInt(
+			new serverback(Integer.parseInt(
 //					args[1]
 			"" + 8182
 			)).start();

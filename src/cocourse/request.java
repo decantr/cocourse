@@ -5,19 +5,19 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-class Request implements Runnable {
+class request implements Runnable {
 
 	private Socket i;
-	private ServerBack s;
+	private serverback s;
 	private BufferedReader r;
 	private PrintWriter o;
 
-	Request ( ServerBack s , Socket i ) {
+	request( serverback s , Socket i ) {
 		this.s = s;
 		this.i = i;
 	}
 
-	public void close () {
+	public void close( ) {
 		System.out.println( "shutting down" );
 		try {
 			i.close( );
@@ -26,14 +26,21 @@ class Request implements Runnable {
 	}
 
 	@Override
-	public void run () {
+	public void run( ) {
 		try {
 
+//			set the reader and output streams
 			r = new BufferedReader( new InputStreamReader( i.getInputStream( ) ) );
+			o = new PrintWriter( i.getOutputStream( ) , true );
 
-			o = new PrintWriter( i.getOutputStream( ) );
-
-			o.println( "connected" + i.getInetAddress( ) );
+//			notify the user they connected
+			o.println( new packet(
+					"data" ,
+					"connected " +
+							i.getInetAddress( ).getHostName( ) +
+							" (" + i.getInetAddress( ).getHostAddress( ) +
+							") on " + i.getLocalPort( )
+			) );
 
 			while ( true ) {
 
