@@ -43,13 +43,12 @@ class request implements Runnable {
 			) );
 
 			while ( true ) {
-
 				String t = r.readLine( );
 
 				if ( t == null || t.equals( "exit" ) ) break;
 
-				if ( t.equals( "b" ) ) System.out.println( t );
-
+				if ( t.equals( "b" ) )
+				o.println( new packet( "command" , "test" ).send() );
 			}
 
 		} catch ( Exception e ) {
