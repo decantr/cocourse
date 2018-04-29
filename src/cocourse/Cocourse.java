@@ -5,6 +5,9 @@
  */
 package cocourse;
 
+import cocourse.server.gui.serverfront;
+import cocourse.server.serverback;
+
 /**
  * @author decanter
  */
@@ -20,10 +23,12 @@ public class Cocourse {
 
 
 //		if ( args.length > 0 )
-			new serverback(Integer.parseInt(
+			serverback s = new serverback(Integer.parseInt(
 //					args[1]
 			"" + 8182
-			)).start();
+			));
+
+			s.start();
 
 	}
 

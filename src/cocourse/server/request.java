@@ -1,11 +1,14 @@
-package cocourse;
+package cocourse.server;
+
+import cocourse.packet;
+import cocourse.server.serverback;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-class request implements Runnable {
+public class request implements Runnable {
 
 	private Socket i;
 	private serverback s;

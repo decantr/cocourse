@@ -1,4 +1,4 @@
-package cocourse;
+package cocourse.server;
 
 import java.net.ServerSocket;
 import java.util.ArrayList;
@@ -22,8 +22,8 @@ public class serverback extends Thread {
 
 	public serverback( int port ) {
 //		double check if the port is valid
-		if ( port > max || port < min ) return;
-		else this.port = port;
+		if ( portFree( port ) ) this.port = port;
+		else return;
 
 		this.cons = new ArrayList <>( );
 
@@ -34,7 +34,7 @@ public class serverback extends Thread {
 	}
 
 	@Override
-	public void run () {
+	public void run( ) {
 
 		try {
 //      create new socket on the port passed in
@@ -52,14 +52,35 @@ public class serverback extends Thread {
 //				shutdown the pool and close the socket
 				pool.shutdown( );
 				sock.close( );
-			} catch ( Exception ignored ) { }
+			} catch ( Exception ignored ) {
+			}
 		}
 
 	}
 
 	//	method to close a request
-	void close ( request r) {
-		r.close();
+	public void close( request r ) {
+		r.close( );
 		this.cons.remove( r );
+	}
+
+	//	method to check port availability
+	public boolean portFree ( int p ) {
+
+		ServerSocket s = null;
+
+		if ( port > max || port < min )
+			try {
+
+				s = new ServerSocket( p );
+				return true;
+
+			} catch ( Exception ignored ) {
+			} finally {
+				if ( s != null )
+					try { s.close( ); } catch ( Exception ignored ) {}
+			}
+
+		return false;
 	}
 }
