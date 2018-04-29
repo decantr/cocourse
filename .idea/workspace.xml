@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8da36b08-8296-4b4e-a728-330fc204f059" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/cocourse/request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/serverback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/serverback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cocourse/Cocourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/Cocourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cocourse/request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cocourse/serverback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/serverback.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,15 +23,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="request.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cocourse/request.java">
+      <file leaf-file-name="serverback.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverback.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
+            <state relative-caret-position="280">
+              <caret line="69" column="26" lean-forward="true" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1524970361535" expanded="true" signature="503:1198" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="serverfront.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/serverfront.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+              <folding>
+                <element signature="docComment;class#serverfront#0" />
+                <element signature="docComment;method#serverfront#0;class#serverfront#0" />
+                <element signature="docComment;method#initComponents#0;class#serverfront#0" />
+                <element signature="method#initComponents#0;class#serverfront#0" />
+                <element signature="class#2193:2370" />
+                <element signature="class#2442:2617" />
+                <element signature="method#btnCloseActionPerformed#0;class#serverfront#0" />
+                <element signature="e#11880#11921#0" />
+                <element signature="method#btnNewActionPerformed#0;class#serverfront#0" />
+                <element signature="e#12355#12394#0" />
+                <element signature="docComment;method#main#0;class#serverfront#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="diaNew.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/diaNew.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="505">
+              <caret line="138" column="28" selection-start-line="138" selection-start-column="28" selection-end-line="138" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#806#895#0" expanded="true" />
+                <element signature="method#initComponents#0;class#diaNew#0" />
+                <element signature="e#1563#1564#0" expanded="true" />
+                <element signature="e#1604#1605#0" expanded="true" />
+                <element signature="e#1773#1774#0" expanded="true" />
+                <element signature="e#1812#1813#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cocourse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cocourse/Cocourse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -46,21 +99,26 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/cocourse/Cocourse.java" />
         <option value="$PROJECT_DIR$/src/cocourse/con.java" />
         <option value="$PROJECT_DIR$/src/cocourse/Request.java" />
         <option value="$PROJECT_DIR$/src/cocourse/ServerBack.java" />
         <option value="$PROJECT_DIR$/src/cocourse/packet.java" />
-        <option value="$PROJECT_DIR$/src/cocourse/serverback.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/serverf.form" />
+        <option value="$PROJECT_DIR$/src/cocourse/serverfront.java" />
         <option value="$PROJECT_DIR$/src/cocourse/request.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/serverback.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/server/serverback.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/server/gui/serverfront.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/Cocourse.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/server/gui/diaNew.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1072" />
-    <option name="y" value="215" />
-    <option name="width" value="1356" />
-    <option name="height" value="1029" />
+    <option name="x" value="150" />
+    <option name="y" value="116" />
+    <option name="width" value="2126" />
+    <option name="height" value="1227" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -88,6 +146,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="cocourse" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cocourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cocourse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cocourse" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cocourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cocourse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cocourse" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -99,6 +172,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../cm3113clientserverbasic" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/cocourse/server" />
+      <recent name="$PROJECT_DIR$/src/cocourse/server/gui" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -112,20 +192,42 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.serverfront (1)">
     <configuration name="Cocourse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cocourse.Cocourse" />
       <module name="cocourse" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cocourse.*" />
+          <option name="PATTERN" value="cocourse.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="serverfront (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cocourse.server.gui.serverfront" />
+      <module name="cocourse" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cocourse.server.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="serverfront" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cocourse.server.serverfront" />
+      <module name="cocourse" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cocourse.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -165,9 +267,16 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.Cocourse" />
+      <item itemvalue="Application.serverfront" />
+      <item itemvalue="Application.serverfront (1)" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.serverfront (1)" />
         <item itemvalue="Application.Cocourse" />
+        <item itemvalue="Application.serverfront" />
       </list>
     </recent_temporary>
   </component>
@@ -185,97 +294,139 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1072" y="215" width="1356" height="1029" extended-state="0" />
+    <frame x="150" y="116" width="2126" height="1227" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3295688" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32854208" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32934132" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32809773" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20648968" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295688" />
+      <window_info id="Designer" order="6" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11335842" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20648968" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Capture Tool" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32854208" />
-      <window_info anchor="right" id="Theme Preview" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.20648968" />
-      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="2" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2060207" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info id="Image Layers" order="0" />
-      <window_info id="Designer" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32854208" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="6" />
+      <window_info id="UI Designer" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295688" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Capture Tool" order="1" />
+      <window_info id="Capture Tool" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3295688" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info id="Favorites" order="5" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cocourse/server/serverfront.java</url>
+          <line>31</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cocourse/serverback.java">
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1525027712045" expanded="true" signature="577:1272" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1525027712045" expanded="true" signature="577:1272" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1525027712045" expanded="true" signature="577:1272" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/serverback.java">
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/serverback.java">
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
@@ -289,16 +440,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/connection.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/Cocourse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -306,24 +448,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/serverback.java">
+    <entry file="file://$PROJECT_DIR$/src/cocourse/connection.java" />
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/serverback.java">
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
@@ -337,57 +470,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/request.java">
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/request.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1525027712045" expanded="true" signature="577:1272" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/con.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/con.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/packet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/serverf.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/serverf.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverfront.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
           <folding>
-            <element signature="method#packet#0;class#packet#0" />
-            <element signature="method#packet#1;class#packet#0" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
+            <element signature="docComment;class#serverfront#0" />
+            <element signature="docComment;method#serverfront#0;class#serverfront#0" />
+            <element signature="method#serverfront#0;class#serverfront#0" />
+            <element signature="docComment;method#initComponents#0;class#serverfront#0" />
+            <element signature="method#initComponents#0;class#serverfront#0" />
+            <element signature="class#1312:1489" />
+            <element signature="class#1561:1736" />
+            <element signature="method#btnCloseActionPerformed#0;class#serverfront#0" />
+            <element signature="e#3722#3763#0" />
+            <element signature="method#fillGreeter#0;class#serverfront#0" />
+            <element signature="docComment;method#main#0;class#serverfront#0" />
+            <element signature="method#main#0;class#serverfront#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/serverback.java">
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/request.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+        <state relative-caret-position="133">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1525027712045" expanded="true" signature="577:1272" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/diaNew.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="138" column="28" selection-start-line="138" selection-start-column="28" selection-end-line="138" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#806#895#0" expanded="true" />
+            <element signature="method#initComponents#0;class#diaNew#0" />
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1604#1605#0" expanded="true" />
+            <element signature="e#1773#1774#0" expanded="true" />
+            <element signature="e#1812#1813#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/Cocourse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="494">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/request.java">
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/serverfront.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
+        <state>
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding>
+            <element signature="docComment;class#serverfront#0" />
+            <element signature="docComment;method#serverfront#0;class#serverfront#0" />
+            <element signature="docComment;method#initComponents#0;class#serverfront#0" />
+            <element signature="method#initComponents#0;class#serverfront#0" />
+            <element signature="class#2193:2370" />
+            <element signature="class#2442:2617" />
+            <element signature="method#btnCloseActionPerformed#0;class#serverfront#0" />
+            <element signature="e#11880#11921#0" />
+            <element signature="method#btnNewActionPerformed#0;class#serverfront#0" />
+            <element signature="e#12355#12394#0" />
+            <element signature="docComment;method#main#0;class#serverfront#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="69" column="26" lean-forward="true" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1524970361535" expanded="true" signature="503:1198" ph="..." />
           </folding>
         </state>
       </provider>
