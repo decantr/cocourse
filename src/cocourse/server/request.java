@@ -1,7 +1,6 @@
 package cocourse.server;
 
 import cocourse.packet;
-import cocourse.server.serverback;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -15,9 +14,15 @@ public class request implements Runnable {
 	private BufferedReader r;
 	private PrintWriter o;
 
+	private ip ip;
+
 	request( serverback s , Socket i ) {
 		this.s = s;
 		this.i = i;
+		this.ip = new ip (
+				i.getInetAddress( ).getHostName( ) ,
+				i.getInetAddress( ).getHostAddress( ) ,
+				i.getLocalPort( ));
 	}
 
 	public void close( ) {
@@ -37,13 +42,11 @@ public class request implements Runnable {
 			o = new PrintWriter( i.getOutputStream( ) , true );
 
 //			notify the user they connected
-			o.println( new packet(
-					"data" ,
-					"connected " +
-							i.getInetAddress( ).getHostName( ) +
-							" (" + i.getInetAddress( ).getHostAddress( ) +
-							") on " + i.getLocalPort( )
-			) );
+			packet p = new packet(
+					"log" ,
+					"connected " + s.getIp() + "(" + ") on " + s.getIp().getPort() );
+
+			o.println( p );
 
 			while ( true ) {
 				String t = r.readLine( );
@@ -51,13 +54,19 @@ public class request implements Runnable {
 				if ( t == null || t.equals( "exit" ) ) break;
 
 				if ( t.equals( "b" ) )
-				o.println( new packet( "command" , "test" ).send() );
+					o.println( new packet( "command" , "test" ).send( ) );
 			}
 
 		} catch ( Exception e ) {
-			e.printStackTrace();
+			e.printStackTrace( );
 		} finally {
 			s.close( this );
 		}
 	}
+
+	public ip getIp( ) {
+		return ip;
+	}
+
+
 }

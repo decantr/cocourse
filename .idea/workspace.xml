@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8da36b08-8296-4b4e-a728-330fc204f059" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/cocourse/Cocourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/Cocourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/serverback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/serverback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cocourse/server/ip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cocourse/server/request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cocourse/server/serverback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/serverback.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,36 +19,97 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="serverback.java" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="serverback.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverback.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+            <state relative-caret-position="274">
+              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2414#2415#0" expanded="true" />
+                <element signature="e#2430#2431#0" expanded="true" />
+                <element signature="e#2871#2872#0" expanded="true" />
+                <element signature="e#2893#2894#0" expanded="true" />
+                <element signature="e#2701#2702#0" expanded="true" />
+                <element signature="e#2711#2712#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serverfront.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ip.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cocourse/server/ip.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="e#257#258#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+                <element signature="e#306#307#0" expanded="true" />
+                <element signature="e#328#329#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#372#373#0" expanded="true" />
+                <element signature="e#414#415#0" expanded="true" />
+                <element signature="e#432#433#0" expanded="true" />
+                <element signature="e#439#440#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+                <element signature="e#413#414#0" expanded="true" />
+                <element signature="e#462#463#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="request.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cocourse/server/request.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="31" column="35" lean-forward="true" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1392#1393#0" expanded="true" />
+                <element signature="e#1407#1408#0" expanded="true" />
+                <marker date="1525038178972" expanded="true" signature="689:1316" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="packet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cocourse/packet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dianew.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/dianew.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="141" selection-start-line="141" selection-end-line="141" />
+              <folding>
+                <element signature="e#618#619#0" expanded="true" />
+                <element signature="e#638#639#0" expanded="true" />
+                <element signature="e#876#965#0" expanded="true" />
+                <element signature="method#initComponents#0;class#dianew#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="serverfront.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/serverfront.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+            <state relative-caret-position="182">
+              <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
               <folding>
                 <element signature="docComment;class#serverfront#0" />
                 <element signature="docComment;method#serverfront#0;class#serverfront#0" />
                 <element signature="docComment;method#initComponents#0;class#serverfront#0" />
-                <element signature="method#initComponents#0;class#serverfront#0" />
-                <element signature="class#2193:2370" />
-                <element signature="class#2442:2617" />
-                <element signature="method#btnCloseActionPerformed#0;class#serverfront#0" />
-                <element signature="e#11880#11921#0" />
-                <element signature="method#btnNewActionPerformed#0;class#serverfront#0" />
-                <element signature="e#12355#12394#0" />
-                <element signature="docComment;method#main#0;class#serverfront#0" />
+                <element signature="e#11798#11885#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,14 +147,17 @@
         <option value="$PROJECT_DIR$/src/cocourse/serverfront.java" />
         <option value="$PROJECT_DIR$/src/cocourse/request.java" />
         <option value="$PROJECT_DIR$/src/cocourse/serverback.java" />
-        <option value="$PROJECT_DIR$/src/cocourse/server/serverback.java" />
-        <option value="$PROJECT_DIR$/src/cocourse/server/gui/serverfront.java" />
         <option value="$PROJECT_DIR$/src/cocourse/Cocourse.java" />
         <option value="$PROJECT_DIR$/src/cocourse/server/gui/diaNew.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/server/gui/dianew.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/server/request.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/server/ip.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/server/serverback.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/server/gui/serverfront.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="150" />
     <option name="y" value="116" />
     <option name="width" value="2126" />
@@ -106,6 +171,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,7 +210,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -277,16 +342,15 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32934132" />
+      <window_info active="true" anchor="bottom" id="Messages" order="9" visible="true" weight="0.3292683" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32809773" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20644599" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="6" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11335842" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.11335842" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="UI Designer" order="3" />
@@ -301,19 +365,21 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32854208" />
       <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2060207" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32854208" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="6" />
       <window_info id="UI Designer" order="3" />
@@ -322,10 +388,9 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295688" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info id="Capture Tool" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295688" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.3295688" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -343,16 +408,78 @@
           <properties />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1482">
+          <caret line="86" column="34" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2414#2415#0" expanded="true" />
+            <element signature="e#2430#2431#0" expanded="true" />
+            <element signature="e#2871#2872#0" expanded="true" />
+            <element signature="e#2893#2894#0" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
+            <element signature="e#2711#2712#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/packet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/dianew.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="159" column="7" selection-start-line="159" selection-start-column="7" selection-end-line="159" selection-end-column="7" />
+          <folding>
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#876#965#0" expanded="true" />
+            <element signature="method#initComponents#0;class#dianew#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/Cocourse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/serverfront.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="33" column="55" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+          <folding>
+            <element signature="docComment;class#serverfront#0" />
+            <element signature="docComment;method#serverfront#0;class#serverfront#0" />
+            <element signature="docComment;method#initComponents#0;class#serverfront#0" />
+            <element signature="e#11798#11885#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2414#2415#0" expanded="true" />
+            <element signature="e#2430#2431#0" expanded="true" />
+            <element signature="e#2871#2872#0" expanded="true" />
+            <element signature="e#2893#2894#0" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
+            <element signature="e#2711#2712#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -363,7 +490,9 @@
           <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1525027712045" expanded="true" signature="577:1272" ph="..." />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1407#1408#0" expanded="true" />
+            <marker date="1525038178972" expanded="true" signature="689:1316" ph="..." />
           </folding>
         </state>
       </provider>
@@ -374,7 +503,9 @@
           <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1525027712045" expanded="true" signature="577:1272" ph="..." />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1407#1408#0" expanded="true" />
+            <marker date="1525038178972" expanded="true" signature="689:1316" ph="..." />
           </folding>
         </state>
       </provider>
@@ -385,7 +516,9 @@
           <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1525027712045" expanded="true" signature="577:1272" ph="..." />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1407#1408#0" expanded="true" />
+            <marker date="1525038178972" expanded="true" signature="689:1316" ph="..." />
           </folding>
         </state>
       </provider>
@@ -454,73 +587,16 @@
           <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1525027712045" expanded="true" signature="577:1272" ph="..." />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1407#1408#0" expanded="true" />
+            <marker date="1525038178972" expanded="true" signature="689:1316" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/con.java" />
-    <entry file="file://$PROJECT_DIR$/src/cocourse/packet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/serverf.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/serverf.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverfront.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
-          <folding>
-            <element signature="docComment;class#serverfront#0" />
-            <element signature="docComment;method#serverfront#0;class#serverfront#0" />
-            <element signature="method#serverfront#0;class#serverfront#0" />
-            <element signature="docComment;method#initComponents#0;class#serverfront#0" />
-            <element signature="method#initComponents#0;class#serverfront#0" />
-            <element signature="class#1312:1489" />
-            <element signature="class#1561:1736" />
-            <element signature="method#btnCloseActionPerformed#0;class#serverfront#0" />
-            <element signature="e#3722#3763#0" />
-            <element signature="method#fillGreeter#0;class#serverfront#0" />
-            <element signature="docComment;method#main#0;class#serverfront#0" />
-            <element signature="method#main#0;class#serverfront#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/server/request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1525027712045" expanded="true" signature="577:1272" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/diaNew.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="138" column="28" selection-start-line="138" selection-start-column="28" selection-end-line="138" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#806#895#0" expanded="true" />
-            <element signature="method#initComponents#0;class#diaNew#0" />
-            <element signature="e#1563#1564#0" expanded="true" />
-            <element signature="e#1604#1605#0" expanded="true" />
-            <element signature="e#1773#1774#0" expanded="true" />
-            <element signature="e#1812#1813#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverfront.java" />
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/diaNew.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/Cocourse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
@@ -528,32 +604,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/serverfront.java">
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/dianew.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        <state relative-caret-position="324">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
           <folding>
-            <element signature="docComment;class#serverfront#0" />
-            <element signature="docComment;method#serverfront#0;class#serverfront#0" />
-            <element signature="docComment;method#initComponents#0;class#serverfront#0" />
-            <element signature="method#initComponents#0;class#serverfront#0" />
-            <element signature="class#2193:2370" />
-            <element signature="class#2442:2617" />
-            <element signature="method#btnCloseActionPerformed#0;class#serverfront#0" />
-            <element signature="e#11880#11921#0" />
-            <element signature="method#btnNewActionPerformed#0;class#serverfront#0" />
-            <element signature="e#12355#12394#0" />
-            <element signature="docComment;method#main#0;class#serverfront#0" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#876#965#0" expanded="true" />
+            <element signature="method#initComponents#0;class#dianew#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/packet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="35" lean-forward="true" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1407#1408#0" expanded="true" />
+            <marker date="1525038178972" expanded="true" signature="689:1316" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/ip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/server/serverback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+        <state relative-caret-position="274">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2414#2415#0" expanded="true" />
+            <element signature="e#2430#2431#0" expanded="true" />
+            <element signature="e#2871#2872#0" expanded="true" />
+            <element signature="e#2893#2894#0" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
+            <element signature="e#2711#2712#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/serverfront.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
+          <folding>
+            <element signature="docComment;class#serverfront#0" />
+            <element signature="docComment;method#serverfront#0;class#serverfront#0" />
+            <element signature="docComment;method#initComponents#0;class#serverfront#0" />
+            <element signature="e#11798#11885#0" expanded="true" />
           </folding>
         </state>
       </provider>
