@@ -1,4 +1,4 @@
-package cocourse.server;
+package cocourse;
 
 public class ip {
 	private String ip;

@@ -1,5 +1,6 @@
 package cocourse.server;
 
+import cocourse.ip;
 import cocourse.packet;
 
 import java.net.InetAddress;

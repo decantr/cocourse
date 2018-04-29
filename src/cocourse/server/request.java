@@ -1,5 +1,6 @@
 package cocourse.server;
 
+import cocourse.ip;
 import cocourse.packet;
 
 import java.io.BufferedReader;
@@ -14,7 +15,7 @@ public class request implements Runnable {
 	private BufferedReader r;
 	private PrintWriter o;
 
-	private ip ip;
+	private cocourse.ip ip;
 
 	request( serverback s , Socket i ) {
 		this.s = s;
@@ -42,11 +43,8 @@ public class request implements Runnable {
 			o = new PrintWriter( i.getOutputStream( ) , true );
 
 //			notify the user they connected
-			packet p = new packet(
-					"log" ,
-					"connected " + s.getIp() + "(" + ") on " + s.getIp().getPort() );
-
-			o.println( p );
+			o.println(new packet(
+					"log" , "connected " + s.getIp() + "(" + ") on " + s.getIp().getPort() ) );
 
 			while ( true ) {
 				String t = r.readLine( );
