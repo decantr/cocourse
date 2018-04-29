@@ -20,10 +20,10 @@ public class Cocourse {
 
 
 //		if ( args.length > 0 )
-			new ServerBack().create( Integer.parseInt(
+			new ServerBack(Integer.parseInt(
 //					args[1]
 			"" + 8182
-			) );
+			)).start();
 
 	}
 
