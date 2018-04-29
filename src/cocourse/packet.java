@@ -15,6 +15,18 @@ public class packet {
 		this.time = new SimpleDateFormat( "yyyy.MM.dd.HH.mm.ss" ).format( new Date( ) );
 	}
 
+	public packet ( String m ) {
+		String[] r = m.split( ":" , 3 );
+
+		this.type = r[0];
+		this.contents = r[2];
+		this.time = r[1];
+	}
+
+	public String send ( ) {
+		return this.getType() + ":" + this.getTime() + ":" + this.getContents();
+	}
+
 	public String getType( ) {
 		return this.type;
 	}
@@ -24,7 +36,7 @@ public class packet {
 	}
 
 	public String getContents( ) {
-		return contents;
+		return this.contents;
 	}
 
 	@Override

@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/cocourse/packet.java" line="25" mnemonic="0" />
+    <bookmark url="file://$PROJECT_DIR$/src/cocourse/packet.java" line="37" mnemonic="0" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8da36b08-8296-4b4e-a728-330fc204f059" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/cocourse/packet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/Cocourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/Cocourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/ServerBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/serverback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cocourse/packet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/packet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cocourse/request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/request.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,11 +18,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="serverback.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cocourse/serverback.java">
+      <file leaf-file-name="request.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cocourse/request.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            <state relative-caret-position="460">
+              <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1524969831291" expanded="true" signature="503:1167" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,11 +48,11 @@
       <list>
         <option value="$PROJECT_DIR$/src/cocourse/Cocourse.java" />
         <option value="$PROJECT_DIR$/src/cocourse/con.java" />
-        <option value="$PROJECT_DIR$/src/cocourse/packet.java" />
         <option value="$PROJECT_DIR$/src/cocourse/Request.java" />
-        <option value="$PROJECT_DIR$/src/cocourse/request.java" />
         <option value="$PROJECT_DIR$/src/cocourse/ServerBack.java" />
         <option value="$PROJECT_DIR$/src/cocourse/serverback.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/packet.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/request.java" />
       </list>
     </option>
   </component>
@@ -194,7 +195,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32854208" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32854208" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.20648968" />
@@ -353,18 +354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/packet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/Cocourse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -372,21 +361,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/request.java">
+    <entry file="file://$PROJECT_DIR$/src/cocourse/packet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="342">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1524969271161" expanded="true" signature="503:1171" ph="..." />
+            <element signature="method#packet#0;class#packet#0" />
+            <element signature="method#packet#1;class#packet#0" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/serverback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        <state relative-caret-position="410">
+          <caret line="67" column="33" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1524969831291" expanded="true" signature="503:1167" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

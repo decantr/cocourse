@@ -53,7 +53,7 @@ class request implements Runnable {
 			}
 
 		} catch ( Exception e ) {
-			System.out.println( e );
+			e.printStackTrace();
 		} finally {
 			s.close( this );
 		}
