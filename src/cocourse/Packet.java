@@ -3,19 +3,19 @@ package cocourse;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class packet {
+public class Packet {
 
 	private String type;
 	private String contents;
 	private String time;
 
-	public packet( String t , String c ) {
+	public Packet( String t , String c ) {
 		this.type = t;
 		this.contents = c;
 		this.time = new SimpleDateFormat( "yyyy.MM.dd.HH.mm.ss" ).format( new Date( ) );
 	}
 
-	public packet ( String m ) {
+	public Packet( String m ) {
 		String[] r = m.split( ":" , 3 );
 
 		this.type = r[0];

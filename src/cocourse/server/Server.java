@@ -1,7 +1,7 @@
 package cocourse.server;
 
-import cocourse.ip;
-import cocourse.packet;
+import cocourse.Address;
+import cocourse.Packet;
 
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -11,22 +11,22 @@ import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-public class serverback extends Thread {
+public class Server extends Thread {
 
 	private final static short min = 1024;
 	private final static int max = 49151;
 	private static final byte threads = 4;
 	private static final byte q = 8;
 
-	private ArrayList <request> cons;
-	private ArrayList <packet> log;
+	private ArrayList <Connection> cons;
+	private ArrayList <Packet> log;
 
 	private ServerSocket sock;
 	private ThreadPoolExecutor pool;
-	private ip ip;
+	private Address ip;
 
 
-	public serverback( int port ) {
+	public Server( int port ) {
 //		double check if the port is valid
 		if ( ! portFree( port ) ) return;
 
@@ -38,9 +38,9 @@ public class serverback extends Thread {
 		this.pool.setRejectedExecutionHandler( new ThreadPoolExecutor.DiscardPolicy( ) );
 
 		try {
-			this.ip = new ip( InetAddress.getLocalHost().getHostAddress(), InetAddress.getLocalHost().getHostName(), port );
+			this.ip = new Address( InetAddress.getLocalHost().getHostAddress(), InetAddress.getLocalHost().getHostName(), port );
 		} catch ( UnknownHostException e ) {
-			this.ip = new ip ( "127.0.0.1" , "localhost" , port );
+			this.ip = new Address( "127.0.0.1" , "localhost" , port );
 		}
 
 		this.log = new ArrayList <>(  );
@@ -59,7 +59,7 @@ public class serverback extends Thread {
 //			wait for requests and submit them to the pool
 			while ( true ) {
 
-				cons.add( new request( this , this.sock.accept( ) ) );
+				cons.add( new Connection( this , this.sock.accept( ) ) );
 
 				pool.submit( cons.get( cons.size( ) - 1 ) );
 
@@ -80,8 +80,8 @@ public class serverback extends Thread {
 
 	}
 
-	//	method to close a request
-	public void close( request r ) {
+	//	method to close a Connection
+	public void close( Connection r ) {
 		r.close( );
 		this.cons.remove( r );
 	}
@@ -109,22 +109,22 @@ public class serverback extends Thread {
 		return false;
 	}
 
-	public ip getIp () {
+	public Address getIp () {
 		return this.ip;
 	}
 
 //	return the log
-	public ArrayList<packet> getLog() {
+	public ArrayList<Packet> getLog() {
 		return this.log;
 	}
 
 //	add to the log
-	public void log ( packet a ) {
+	public void log ( Packet a ) {
 		this.log.add( a );
 	}
 
 	public void log ( String level, String contents ) {
-		packet p = new packet( level , contents );
+		Packet p = new Packet( level , contents );
 		this.log(p);
 	}
 }

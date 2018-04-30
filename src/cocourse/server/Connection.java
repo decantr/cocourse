@@ -1,26 +1,26 @@
 package cocourse.server;
 
-import cocourse.ip;
-import cocourse.packet;
+import cocourse.Address;
+import cocourse.Packet;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-public class request implements Runnable {
+public class Connection implements Runnable {
 
 	private Socket i;
-	private serverback s;
+	private Server s;
 	private BufferedReader r;
 	private PrintWriter o;
 
-	private cocourse.ip ip;
+	private Address ip;
 
-	request( serverback s , Socket i ) {
+	Connection( Server s , Socket i ) {
 		this.s = s;
 		this.i = i;
-		this.ip = new ip (
+		this.ip = new Address(
 				i.getInetAddress( ).getHostName( ) ,
 				i.getInetAddress( ).getHostAddress( ) ,
 				i.getLocalPort( ));
@@ -43,7 +43,7 @@ public class request implements Runnable {
 			o = new PrintWriter( i.getOutputStream( ) , true );
 
 //			notify the user they connected
-			o.println(new packet(
+			o.println(new Packet(
 					"log" , "connected " + s.getIp() + "(" + ") on " + s.getIp().getPort() ) );
 
 			while ( true ) {
@@ -52,7 +52,7 @@ public class request implements Runnable {
 				if ( t == null || t.equals( "exit" ) ) break;
 
 				if ( t.equals( "b" ) )
-					o.println( new packet( "command" , "test" ).send( ) );
+					o.println( new Packet( "command" , "test" ).send( ) );
 			}
 
 		} catch ( Exception e ) {
@@ -62,7 +62,7 @@ public class request implements Runnable {
 		}
 	}
 
-	public ip getIp( ) {
+	public Address getIp( ) {
 		return ip;
 	}
 

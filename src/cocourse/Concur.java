@@ -5,13 +5,12 @@
  */
 package cocourse;
 
-import cocourse.server.gui.serverfront;
-import cocourse.server.serverback;
+import cocourse.server.Server;
 
 /**
  * @author decanter
  */
-public class Cocourse {
+public class Concur {
 
 	/**
 	 * @param args the command line arguments
@@ -23,7 +22,7 @@ public class Cocourse {
 
 
 //		if ( args.length > 0 )
-			serverback s = new serverback(Integer.parseInt(
+			Server s = new Server(Integer.parseInt(
 //					args[1]
 			"" + 8182
 			));

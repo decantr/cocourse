@@ -1,11 +1,11 @@
 package cocourse;
 
-public class ip {
+public class Address {
 	private String ip;
 	private String hostname;
 	private int port;
 
-	public ip( String ip , String hostname , int port ) {
+	public Address( String ip , String hostname , int port ) {
 		this.ip = ip;
 		this.hostname = hostname;
 		this.port = port;
@@ -27,9 +27,6 @@ public class ip {
 		this.port = port;
 	}
 
-	public String ipv4 ( ) {
-		return this.ip + ":" + this.port;
-	}
 	@Override
 	public String toString( ) {
 		return this.ip + " (" + this.hostname + ") on " + this.port;
