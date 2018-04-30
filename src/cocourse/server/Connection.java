@@ -34,6 +34,11 @@ public class Connection implements Runnable {
 		}
 	}
 
+	public void sendPacket( Packet packet) {
+		this.o.println( packet );
+	}
+
+
 	@Override
 	public void run( ) {
 		try {
@@ -44,7 +49,7 @@ public class Connection implements Runnable {
 
 //			notify the user they connected
 			o.println(new Packet(
-					"log" , "connected " + s.getIp() + "(" + ") on " + s.getIp().getPort() ) );
+					"log" , "connected " + s.getIp().toString() ));
 
 			while ( true ) {
 				String t = r.readLine( );

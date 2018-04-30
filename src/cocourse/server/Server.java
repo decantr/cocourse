@@ -49,6 +49,7 @@ public class Server extends Thread {
 		this.log( "log" , "server created" );
 	}
 
+
 	@Override
 	public void run( ) {
 
@@ -93,7 +94,15 @@ public class Server extends Thread {
 
 	public void startAuction( ) {
 		this.auction.start();
+		this.notifyClients();
 		this.log("log", "auction started");
+	}
+
+	private void notifyClients( ) {
+		for ( Connection c : this.cons ) {
+			c.sendPacket( this.getAuction().toPacket() );
+		}
+
 	}
 
 	//	method to close a Connection

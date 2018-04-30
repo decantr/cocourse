@@ -1,6 +1,7 @@
 package cocourse.client;
 
 import cocourse.Address;
+import cocourse.Auction;
 import cocourse.Packet;
 
 import java.io.BufferedReader;
@@ -14,9 +15,14 @@ public class Client extends Thread {
 	private Socket socket;
 	private BufferedReader r;
 	private PrintWriter o;
+	private Auction auction;
 
 	public Client( String hostname , int port ) {
 		this.ip = new Address( hostname.equals( "" ) ? "127.0.0.1" : hostname , "" , port );
+	}
+
+	public Auction getAuction () {
+		return this.auction;
 	}
 
 	public void run( ) {
@@ -31,6 +37,11 @@ public class Client extends Thread {
 				String t = r.readLine( );
 
 				if ( t == null || t.equals( "exit" ) ) break;
+
+				Packet p = new Packet( t );
+
+				if ( t.split( ":" , 1 ).equals( "auction" ))
+					this.auction = Auction.parseAuction( p );
 
 				if ( t.equals( "b" ) )
 					o.println( new Packet( "command" , "test" ).send( ) );

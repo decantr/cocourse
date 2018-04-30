@@ -6,6 +6,7 @@
 package cocourse.server.gui;
 
 import cocourse.Auction;
+import cocourse.Bid;
 
 import javax.swing.*;
 
@@ -145,7 +146,7 @@ public class NewAuctionGUI extends javax.swing.JDialog {
 		try {
 			this.auction = new Auction(
 					txtName.getText( ) , txtDesc.getText( ) ,
-					Double.parseDouble( txtBid.getText( ) ) ,
+					new Bid( "" , Double.parseDouble( txtBid.getText( ) ) ),
 					Long.parseLong( txtDuration.getText( ) )
 			);
 			this.setVisible( false );

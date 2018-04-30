@@ -12,6 +12,12 @@ public class Bid {
 		this.time = System.currentTimeMillis( );
 	}
 
+	public Bid( String user , double amount , long time ) {
+		this.user = user;
+		this.amount = amount;
+		this.time = time;
+	}
+
 	public String getUser( ) {
 		return user;
 	}
@@ -32,8 +38,13 @@ public class Bid {
 		return time;
 	}
 
+	public static Bid parseBid( String s ) {
+		String[] t = s.split( "&" );
+		return new Bid( t[0] , Double.parseDouble( t[1] ) , Long.parseLong( t[2] ) );
+	}
+
 	@Override
 	public String toString( ) {
-		return "Bid recieved at " + time + " from " + user + " for " + amount;
+		return user + "&" + amount + "&" + time;
 	}
 }
