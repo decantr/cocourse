@@ -1,6 +1,7 @@
 package cocourse.server;
 
 import cocourse.Address;
+import cocourse.Auction;
 import cocourse.Packet;
 
 import java.net.InetAddress;
@@ -24,7 +25,7 @@ public class Server extends Thread {
 	private ServerSocket sock;
 	private ThreadPoolExecutor pool;
 	private Address ip;
-
+	private Auction auction;
 
 	public Server( int port ) {
 //		double check if the port is valid
@@ -78,6 +79,14 @@ public class Server extends Thread {
 			}
 		}
 
+	}
+
+	public Auction getAuction( ) {
+		return auction;
+	}
+
+	public void setAuction( Auction auction ) {
+		this.auction = auction;
 	}
 
 	//	method to close a Connection

@@ -5,6 +5,7 @@
  */
 package cocourse.server.gui;
 
+import cocourse.Auction;
 import cocourse.server.Server;
 
 import javax.swing.*;
@@ -16,7 +17,7 @@ import java.text.SimpleDateFormat;
 public class ServerGUI extends javax.swing.JFrame {
 
 	private long startTime;
-	private long endTime;
+	private Auction auction;
 	private Server server;
 	private Timer timer;
 	private int logline = 0;
@@ -27,7 +28,6 @@ public class ServerGUI extends javax.swing.JFrame {
 	public ServerGUI( ) {
 
 		startTime = System.currentTimeMillis( );
-		endTime = System.currentTimeMillis( ) + 5000L;
 
 		if ( server == null ) {
 			System.out.println( "a" );
@@ -43,8 +43,11 @@ public class ServerGUI extends javax.swing.JFrame {
 			}
 			this.txtTime.setText(
 					new SimpleDateFormat( "hh:mm:ss" ).format( System.currentTimeMillis( ) ) );
-			this.txtTimeLeft.setText(
-					new SimpleDateFormat( "hh:mm:ss" ).format( System.currentTimeMillis( ) ) );
+			if ( this.server.getAuction() != null && this.server.getAuction().isRunning() ) {
+				this.txtTimeLeft.setText(
+						new SimpleDateFormat( "mm:ss" ).format( this.server.getAuction().timeLeft( ) ) );
+				this.txtHighestBid.setText("" + this.server.getAuction().getBidHigh());
+			}
 		} );
 
 
@@ -55,7 +58,11 @@ public class ServerGUI extends javax.swing.JFrame {
 		pnlInfo.setVisible( false );
 
 		this.txtIp.setText( server.getIp( ).toString( ) );
+	}
 
+	void swap( ) {
+			pnlInfo.setVisible( ! pnlInfo.isVisible() );
+			btnNew.setVisible( ! btnNew.isVisible() );
 	}
 
 	/**
@@ -87,7 +94,10 @@ public class ServerGUI extends javax.swing.JFrame {
         txtTimeLeft = new javax.swing.JTextField();
         lblTimeLeft = new javax.swing.JLabel();
         lblHighestBid = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnStartAuction = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        txtAuctionName = new javax.swing.JTextField();
+        btnNew = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -122,6 +132,15 @@ public class ServerGUI extends javax.swing.JFrame {
 
         lblHighestBid.setText("highest bid");
 
+        btnStartAuction.setText("Start");
+        btnStartAuction.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStartAuctionActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Item Name");
+
         javax.swing.GroupLayout pnlInfoLayout = new javax.swing.GroupLayout(pnlInfo);
         pnlInfo.setLayout(pnlInfoLayout);
         pnlInfoLayout.setHorizontalGroup(
@@ -131,25 +150,34 @@ public class ServerGUI extends javax.swing.JFrame {
                 .addGroup(pnlInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblHighestBid)
                     .addComponent(lblHighestBidder)
-                    .addComponent(lblTimeLeft))
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtHighestBid)
+                    .addGroup(pnlInfoLayout.createSequentialGroup()
+                        .addComponent(txtHighestBid, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblTimeLeft)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtTimeLeft, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnStartAuction)
                     .addComponent(txtHighestBidder)
-                    .addComponent(txtTimeLeft, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAuctionName))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlInfoLayout.setVerticalGroup(
             pnlInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlInfoLayout.createSequentialGroup()
-                .addContainerGap(30, Short.MAX_VALUE)
+                .addComponent(btnStartAuction)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addGroup(pnlInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTimeLeft, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblTimeLeft))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTimeLeft)
                     .addComponent(lblHighestBid)
                     .addComponent(txtHighestBid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(pnlInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtAuctionName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHighestBidder)
@@ -157,10 +185,10 @@ public class ServerGUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jButton1.setText("New Auction");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnNew.setText("New Auction");
+        btnNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnNewActionPerformed(evt);
             }
         });
 
@@ -172,18 +200,19 @@ public class ServerGUI extends javax.swing.JFrame {
             .addGroup(pnlWrapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlWrapLayout.createSequentialGroup()
                     .addGap(103, 103, 103)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNew, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(74, Short.MAX_VALUE)))
         );
         pnlWrapLayout.setVerticalGroup(
             pnlWrapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlWrapLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(pnlInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pnlWrapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlWrapLayout.createSequentialGroup()
                     .addGap(42, 42, 42)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnNew, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGap(42, 42, 42)))
         );
 
@@ -260,10 +289,23 @@ public class ServerGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-	    
-    }//GEN-LAST:event_jButton1ActionPerformed
+	private void btnNewActionPerformed( java.awt.event.ActionEvent evt ) {//GEN-FIRST:event_btnNewActionPerformed
+
+		NewAuctionGUI a = new NewAuctionGUI( this , true );
+		a.setVisible( true );
+
+		server.setAuction(a.getAuction( ));
+
+		swap( );
+
+		this.txtAuctionName.setText(this.server.getAuction().getName());
+		this.txtHighestBid.setText("" + this.server.getAuction().getBidHigh());
+	}//GEN-LAST:event_btnNewActionPerformed
+
+    private void btnStartAuctionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartAuctionActionPerformed
+	    server.getAuction().start();
+	    this.btnStartAuction.setEnabled( false );
+    }//GEN-LAST:event_btnStartAuctionActionPerformed
 
 
 	/**
@@ -304,8 +346,10 @@ public class ServerGUI extends javax.swing.JFrame {
 	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnNew;
+    private javax.swing.JButton btnStartAuction;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -318,6 +362,7 @@ public class ServerGUI extends javax.swing.JFrame {
     private javax.swing.JLabel lblUsers;
     private javax.swing.JPanel pnlInfo;
     private javax.swing.JPanel pnlWrap;
+    private javax.swing.JTextField txtAuctionName;
     private javax.swing.JTextField txtHighestBid;
     private javax.swing.JTextField txtHighestBidder;
     private javax.swing.JTextField txtIp;
