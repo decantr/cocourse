@@ -5,31 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8da36b08-8296-4b4e-a728-330fc204f059" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/cocourse/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/Auction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/Bid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/Concur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/Packet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/client/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/client/gui/ClientGUI.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/client/gui/ClientGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/client/gui/ConnectGUI.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/client/gui/ConnectGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/server/Connection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/server/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/server/gui/NewServerGUI.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/server/gui/NewServerGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/Cocourse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/client/clientback.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/ip.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/packet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/server/request.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/server/serverback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/NewServerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="256">
-              <caret line="133" column="5" lean-forward="true" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
+              <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -66,15 +44,50 @@
       <file leaf-file-name="ServerGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="46" column="80" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="80" />
+            <state relative-caret-position="500">
+              <caret line="264" column="6" selection-start-line="264" selection-start-column="6" selection-end-line="264" selection-end-column="6" />
               <folding>
                 <element signature="docComment;class#ServerGUI#0" />
                 <element signature="docComment;method#ServerGUI#0;class#ServerGUI#0" />
-                <element signature="docComment;method#initComponents#0;class#ServerGUI#0" />
-                <element signature="method#initComponents#0;class#ServerGUI#0" />
-                <element signature="e#10576#10663#0" expanded="true" />
+                <element signature="e#1593#1623#0" expanded="true" />
+                <element signature="e#1628#1717#0" expanded="true" />
+                <element signature="e#6427#6428#0" expanded="true" />
+                <element signature="e#6487#6488#0" expanded="true" />
+                <element signature="e#12994#13081#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cocourse/client/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cocourse/server/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1071">
+              <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="156" column="62" lean-forward="true" selection-start-line="156" selection-start-column="62" selection-end-line="156" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -83,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/src/cocourse/client/gui/ConnectGUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="337">
-              <caret line="123" column="44" lean-forward="true" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
+              <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -92,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/src/cocourse/Auction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -100,8 +113,8 @@
       <file leaf-file-name="Bid.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cocourse/Bid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="38">
+              <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -142,13 +155,13 @@
         <option value="$PROJECT_DIR$/src/cocourse/Concur.java" />
         <option value="$PROJECT_DIR$/src/cocourse/server/gui/NewServerGUI.java" />
         <option value="$PROJECT_DIR$/src/cocourse/client/gui/ConnectGUI.java" />
-        <option value="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java" />
         <option value="$PROJECT_DIR$/src/cocourse/Bid.java" />
         <option value="$PROJECT_DIR$/src/cocourse/Auction.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="149" />
     <option name="y" value="117" />
     <option name="width" value="2126" />
@@ -241,7 +254,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Auction">
+  <component name="RunManager" selected="Application.ServerGUI">
     <configuration name="Auction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cocourse.Auction" />
       <module name="cocourse" />
@@ -347,8 +360,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Auction" />
         <item itemvalue="Application.ServerGUI" />
+        <item itemvalue="Application.Auction" />
         <item itemvalue="Application.ConnectGUI" />
         <item itemvalue="Application.serverfront (1)" />
         <item itemvalue="Application.Concur" />
@@ -369,7 +382,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="149" y="117" width="2126" height="1227" extended-state="1" />
+    <frame x="149" y="117" width="2126" height="1227" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -379,7 +392,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20644599" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20644599" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="6" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11335842" />
@@ -388,16 +401,32 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20644599" />
+      <window_info id="Designer" order="6" />
       <window_info id="Image Layers" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3292683" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11335842" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
@@ -405,12 +434,13 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32854208" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2060207" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="6" />
       <window_info id="UI Designer" order="3" />
@@ -419,10 +449,9 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295688" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295688" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.3295688" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -444,7 +473,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cocourse/Cocourse.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/dianew.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/packet.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/client/a.java" />
@@ -461,12 +489,6 @@
           <caret line="86" column="34" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2414#2415#0" expanded="true" />
-            <element signature="e#2430#2431#0" expanded="true" />
-            <element signature="e#2871#2872#0" expanded="true" />
-            <element signature="e#2893#2894#0" expanded="true" />
-            <element signature="e#2701#2702#0" expanded="true" />
-            <element signature="e#2711#2712#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -479,13 +501,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/dianew.java" />
-    <entry file="file://$PROJECT_DIR$/src/cocourse/Concur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/Concur.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/serverfront.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -493,12 +509,6 @@
           <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2414#2415#0" expanded="true" />
-            <element signature="e#2430#2431#0" expanded="true" />
-            <element signature="e#2871#2872#0" expanded="true" />
-            <element signature="e#2893#2894#0" expanded="true" />
-            <element signature="e#2701#2702#0" expanded="true" />
-            <element signature="e#2711#2712#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -545,21 +555,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/Concur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/Concur.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/connection.java" />
-    <entry file="file://$PROJECT_DIR$/src/cocourse/Concur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/Concur.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/connection.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -575,13 +573,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/Concur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/Concur.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/server/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -602,22 +594,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/client/a.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/serverfront.java" />
-    <entry file="file://$PROJECT_DIR$/src/cocourse/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1792">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2414#2415#0" expanded="true" />
-            <element signature="e#2430#2431#0" expanded="true" />
-            <element signature="e#2871#2872#0" expanded="true" />
-            <element signature="e#2893#2894#0" expanded="true" />
-            <element signature="e#2701#2702#0" expanded="true" />
-            <element signature="e#2711#2712#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/server/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="817">
@@ -629,8 +605,11 @@
     <entry file="file://$PROJECT_DIR$/src/cocourse/client/gui/connect.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/client/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
+        <state relative-caret-position="181">
           <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -641,13 +620,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/Concur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/Concur.java" />
     <entry file="file://$PROJECT_DIR$/src/cocourse/client/gui/ClientGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -659,44 +632,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/Bid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/NewServerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
-          <caret line="133" column="5" lean-forward="true" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
+          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/client/gui/ConnectGUI.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="123" column="44" lean-forward="true" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
+        <state relative-caret-position="223">
+          <caret line="156" column="62" lean-forward="true" selection-start-line="156" selection-start-column="62" selection-end-line="156" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/Bid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/Auction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/client/gui/ConnectGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1071">
+          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="46" column="80" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="80" />
+        <state relative-caret-position="500">
+          <caret line="264" column="6" selection-start-line="264" selection-start-column="6" selection-end-line="264" selection-end-column="6" />
           <folding>
             <element signature="docComment;class#ServerGUI#0" />
             <element signature="docComment;method#ServerGUI#0;class#ServerGUI#0" />
-            <element signature="docComment;method#initComponents#0;class#ServerGUI#0" />
-            <element signature="method#initComponents#0;class#ServerGUI#0" />
-            <element signature="e#10576#10663#0" expanded="true" />
+            <element signature="e#1593#1623#0" expanded="true" />
+            <element signature="e#1628#1717#0" expanded="true" />
+            <element signature="e#6427#6428#0" expanded="true" />
+            <element signature="e#6487#6488#0" expanded="true" />
+            <element signature="e#12994#13081#0" expanded="true" />
           </folding>
         </state>
       </provider>
