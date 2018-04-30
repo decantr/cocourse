@@ -5,6 +5,11 @@ public class Address {
 	private String hostname;
 	private int port;
 
+	public Address( String hostname , int port ) {
+		this.hostname = hostname;
+		this.port = port;
+	}
+
 	public Address( String ip , String hostname , int port ) {
 		this.ip = ip;
 		this.hostname = hostname;

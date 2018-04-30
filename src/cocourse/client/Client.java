@@ -17,6 +17,10 @@ public class Client extends Thread {
 	private PrintWriter o;
 	private Auction auction;
 
+	public Client( Address ip ) {
+		this.ip = ip;
+	}
+
 	public Client( String hostname , int port ) {
 		this.ip = new Address( hostname.equals( "" ) ? "127.0.0.1" : hostname , "" , port );
 	}
@@ -32,7 +36,7 @@ public class Client extends Thread {
 			o = new PrintWriter( socket.getOutputStream( ) , true );
 			o.println( new Packet( "handshake" , "hello" ) );
 
-
+			System.out.println( this.isRunning() );
 			while ( true ) {
 				String t = r.readLine( );
 
@@ -58,5 +62,8 @@ public class Client extends Thread {
 		}
 	}
 
-
+	public boolean isRunning () {
+		if ( this.socket == null ) return false;
+		return this.socket.isConnected();
+	}
 }
