@@ -1,31 +1,33 @@
 package cocourse;
 
+import java.util.ArrayList;
+
 public class Auction {
 	private String name;
 	private String desc;
-	private double bidHigh;
+	private Bid bidHigh;
 	private boolean running;
 	private long duration;
 
 	private long startTime;
 	private long endTime;
 
-	private double[] bidHistory;
+	private ArrayList<Bid> bidHistory;
 
-	public Auction( String name , String desc , double bidHigh , long duration ) {
+	public Auction( String name , String desc , double bid , long duration ) {
 		this.name = name;
 		this.desc = desc;
-		this.bidHigh = bidHigh;
+		this.bidHigh = new Bid("", bid);
 		this.duration = duration;
-		bidHistory = new double[400];
+		bidHistory = new ArrayList <>(  );
 		this.running = false;
 	}
 
-	public boolean bid( double bid ) {
-		if ( bid <= this.bidHigh ) return false;
+	public boolean bid( Bid b ) {
+		if ( b.getAmount() <= this.bidHigh.getAmount() ) return false;
 
-		bidHistory[bidHistory.length - 1] = this.bidHigh;
-		bidHigh = bid;
+		this.bidHistory.add( this.bidHigh );
+		this.bidHigh = b;
 		return true;
 	}
 
@@ -37,7 +39,7 @@ public class Auction {
 		return desc;
 	}
 
-	public double getBidHigh( ) {
+	public Bid getBidHigh( ) {
 		return bidHigh;
 	}
 
@@ -49,7 +51,7 @@ public class Auction {
 		return endTime;
 	}
 
-	public double[] getBidHistory( ) {
+	public ArrayList<Bid> getBidHistory( ) {
 		return bidHistory;
 	}
 

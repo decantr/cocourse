@@ -37,16 +37,23 @@ public class ServerGUI extends javax.swing.JFrame {
 		}
 
 		timer = new javax.swing.Timer( 100 , e -> {
+
 			while ( logline < server.getLog( ).size( ) ) {
 				txtLog.append( server.getLog( ).get( logline ).toString( ) + "\n" );
 				logline++;
 			}
+
 			this.txtTime.setText(
 					new SimpleDateFormat( "hh:mm:ss" ).format( System.currentTimeMillis( ) ) );
+
 			if ( this.server.getAuction() != null && this.server.getAuction().isRunning() ) {
+
 				this.txtTimeLeft.setText(
 						new SimpleDateFormat( "mm:ss" ).format( this.server.getAuction().timeLeft( ) ) );
-				this.txtHighestBid.setText("" + this.server.getAuction().getBidHigh());
+
+				this.txtHighestBid.setText("" + this.server.getAuction().getBidHigh().getAmount());
+
+				this.txtHighestBidder.setText( this.server.getAuction().getBidHigh().getUser() );
 			}
 		} );
 
