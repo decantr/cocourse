@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8da36b08-8296-4b4e-a728-330fc204f059" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/cocourse/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/server/gui/NewServerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/gui/NewServerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -54,13 +54,6 @@
                 <element signature="docComment;class#ServerGUI#0" />
                 <element signature="docComment;method#ServerGUI#0;class#ServerGUI#0" />
                 <element signature="docComment;method#initComponents#0;class#ServerGUI#0" />
-                <element signature="e#1889#1978#0" expanded="true" />
-                <element signature="method#initComponents#0;class#ServerGUI#0" />
-                <element signature="e#4283#4284#0" expanded="true" />
-                <element signature="e#4350#4351#0" expanded="true" />
-                <element signature="e#7901#7902#0" expanded="true" />
-                <element signature="e#7959#7960#0" expanded="true" />
-                <element signature="e#15648#15735#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,8 +74,8 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cocourse/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="114" column="41" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
+            <state relative-caret-position="118">
+              <caret line="82" column="3" selection-start-line="82" selection-start-column="3" selection-end-line="82" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2720#2721#0" expanded="true" />
@@ -449,10 +442,10 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20644599" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20644599" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="6" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12746942" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12746942" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="UI Designer" order="3" />
@@ -768,13 +761,6 @@
             <element signature="docComment;class#ServerGUI#0" />
             <element signature="docComment;method#ServerGUI#0;class#ServerGUI#0" />
             <element signature="docComment;method#initComponents#0;class#ServerGUI#0" />
-            <element signature="e#1889#1978#0" expanded="true" />
-            <element signature="method#initComponents#0;class#ServerGUI#0" />
-            <element signature="e#4283#4284#0" expanded="true" />
-            <element signature="e#4350#4351#0" expanded="true" />
-            <element signature="e#7901#7902#0" expanded="true" />
-            <element signature="e#7959#7960#0" expanded="true" />
-            <element signature="e#15648#15735#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -792,8 +778,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="114" column="41" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
+        <state relative-caret-position="118">
+          <caret line="82" column="3" selection-start-line="82" selection-start-column="3" selection-end-line="82" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2720#2721#0" expanded="true" />
