@@ -136,13 +136,15 @@ public class NewServerGUI extends javax.swing.JDialog {
 
 	private void btnNewActionPerformed( java.awt.event.ActionEvent evt ) {//GEN-FIRST:event_btnNewActionPerformed
 		int p = 0;
+		boolean b = true;
 
-		if ( ! txtPort.getText( ).equals( "" ) )
+		if ( ! txtPort.getText( ).equals( "" ) ) {
 			p = Integer.parseInt( txtPort.getText( ) );
+			b = this.portFree( p );
+		}
 
-		if ( this.portFree( p ) ) {
+		if ( b ) {
 			s = new Server( p );
-			s.start();
 			this.setVisible( false );
 		} else fillGreeter( );
 
@@ -158,14 +160,13 @@ public class NewServerGUI extends javax.swing.JDialog {
 		ServerSocket s = null;
 
 		try {
-			System.out.println( "testing" );
+
 			s = new ServerSocket( p );
 			s.setReuseAddress(true);
-			System.out.println( "good socket" );
+
 			return true;
 
 		} catch ( Exception ignored ) {
-			System.out.println( "bad socket" );
 		} finally {
 			if ( s != null )
 				try {

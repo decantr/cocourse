@@ -26,10 +26,11 @@ public class Server extends Thread {
 	private ThreadPoolExecutor pool;
 	private Address ip;
 	private Auction auction;
+	private boolean running;
 
 	public Server( int port ) {
 //		double check if the port is valid
-		if ( ! portFree( port ) ) return;
+		if ( !portFree( port ) ) return;
 
 		this.cons = new ArrayList <>( );
 
@@ -39,12 +40,13 @@ public class Server extends Thread {
 		this.pool.setRejectedExecutionHandler( new ThreadPoolExecutor.DiscardPolicy( ) );
 
 		try {
-			this.ip = new Address( InetAddress.getLocalHost().getHostAddress(), InetAddress.getLocalHost().getHostName(), port );
-		} catch ( UnknownHostException e ) {
+			this.ip = new Address( InetAddress.getLocalHost( ).getHostAddress( ) , InetAddress.getLocalHost( )
+					.getHostName( ) , port );
+		} catch ( Exception e ) {
 			this.ip = new Address( "127.0.0.1" , "localhost" , port );
 		}
 
-		this.log = new ArrayList <>(  );
+		this.log = new ArrayList <>( );
 		this.log( "log" , "server created" );
 	}
 
@@ -53,9 +55,10 @@ public class Server extends Thread {
 
 		try {
 //      create new socket on the port passed in
-			this.sock = new ServerSocket( this.getIp().getPort() );
-			this.ip.setPort( this.sock.getLocalPort() );
-			this.log("log" , "server listening on " + this.sock.getLocalPort() );
+			this.sock = new ServerSocket( ip.getPort() );
+			this.log( "log" , "server listening on " + this.sock.getLocalPort( ) );
+
+			running = true;
 
 //			wait for requests and submit them to the pool
 			while ( true ) {
@@ -64,7 +67,7 @@ public class Server extends Thread {
 
 				pool.submit( cons.get( cons.size( ) - 1 ) );
 
-				this.log("log" , "new connection from " + cons.get( cons.size() - 1).getIp().toString() );
+				this.log( "log" , "new connection from " + cons.get( cons.size( ) - 1 ).getIp( ).toString( ) );
 
 			}
 
@@ -72,13 +75,12 @@ public class Server extends Thread {
 		} finally {
 			try {
 //				shutdown the pool and close the socket
-				this.log("log", "connection closed" );
+				this.log( "log" , "connection closed" );
 				pool.shutdown( );
 				sock.close( );
 			} catch ( Exception ignored ) {
 			}
 		}
-
 	}
 
 	public Auction getAuction( ) {
@@ -87,6 +89,12 @@ public class Server extends Thread {
 
 	public void setAuction( Auction auction ) {
 		this.auction = auction;
+		this.log("log" , "auction created");
+	}
+
+	public void startAuction( ) {
+		this.auction.start();
+		this.log("log", "auction started");
 	}
 
 	//	method to close a Connection
@@ -95,12 +103,16 @@ public class Server extends Thread {
 		this.cons.remove( r );
 	}
 
+	public boolean isRunning( ) {
+		return running;
+	}
+
 	//	method to check port availability
-	public boolean portFree ( int p ) {
+	public boolean portFree( int p ) {
 
 		ServerSocket s = null;
 
-		if ( p > max || p < min ) {
+		if ( p == 0 || ( p < max && p > min )) {
 			try {
 
 				s = new ServerSocket( p );
@@ -118,22 +130,22 @@ public class Server extends Thread {
 		return false;
 	}
 
-	public Address getIp () {
+	public Address getIp( ) {
 		return this.ip;
 	}
 
-//	return the log
-	public ArrayList<Packet> getLog() {
+	//	return the log
+	public ArrayList <Packet> getLog( ) {
 		return this.log;
 	}
 
-//	add to the log
-	public void log ( Packet a ) {
+	//	add to the log
+	public void log( Packet a ) {
 		this.log.add( a );
 	}
 
-	public void log ( String level, String contents ) {
+	public void log( String level , String contents ) {
 		Packet p = new Packet( level , contents );
-		this.log(p);
+		this.log( p );
 	}
 }
