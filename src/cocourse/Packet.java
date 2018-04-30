@@ -15,12 +15,17 @@ public class Packet {
 		this.time = new SimpleDateFormat( "yyyy.MM.dd.HH.mm.ss" ).format( new Date( ) );
 	}
 
-	public Packet( String m ) {
+	public Packet( String l, String c, String t ) {
+		this.type = l;
+		this.contents = c;
+		this.time = t;
+	}
+
+	public static Packet parsePacket( String m ) {
+		System.out.println(m);
 		String[] r = m.split( ":" , 3 );
 
-		this.type = r[0];
-		this.contents = r[2];
-		this.time = r[1];
+		return new Packet( r[0], r[2], r[1] );
 	}
 
 	public String send ( ) {
@@ -41,6 +46,6 @@ public class Packet {
 
 	@Override
 	public String toString( ) {
-		return time + ": " + contents;
+		return type + ":" + time + ": " + contents;
 	}
 }

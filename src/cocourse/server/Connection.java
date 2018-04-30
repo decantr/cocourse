@@ -14,6 +14,7 @@ public class Connection implements Runnable {
 	private Server s;
 	private BufferedReader r;
 	private PrintWriter o;
+	private boolean run = true;
 
 	private Address ip;
 
@@ -26,18 +27,16 @@ public class Connection implements Runnable {
 				i.getLocalPort( ));
 	}
 
-	public void close( ) {
-		System.out.println( "shutting down" );
+	public void sendPacket( Packet packet) {
+		this.o.println( packet );
+	}
+
+	public void close() {
 		try {
 			i.close( );
 		} catch ( Exception ignored ) {
 		}
 	}
-
-	public void sendPacket( Packet packet) {
-		this.o.println( packet );
-	}
-
 
 	@Override
 	public void run( ) {
@@ -51,20 +50,21 @@ public class Connection implements Runnable {
 			o.println(new Packet(
 					"log" , "connected " + s.getIp().toString() ));
 
-			while ( true ) {
+			while ( run ) {
 				String t = r.readLine( );
 
-				if ( t == null || t.equals( "exit" ) ) break;
+				if ( t == null || t.length() == 0 ) continue;
+
+				System.out.println( t );
+
+				Packet p = Packet.parsePacket(t);
 
 				if ( t.equals( "b" ) )
 					o.println( new Packet( "command" , "test" ).send( ) );
 			}
+			close();
 
-		} catch ( Exception e ) {
-			e.printStackTrace( );
-		} finally {
-			s.close( this );
-		}
+		} catch ( Exception ignored ) {}
 	}
 
 	public Address getIp( ) {

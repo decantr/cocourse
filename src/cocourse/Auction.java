@@ -80,6 +80,7 @@ public class Auction {
 	public static Auction parseAuction( Packet p ) {
 
 		String[] t = p.getContents( ).split( ";" );
+		System.out.println( t.length );
 		return new Auction(
 				t[0] ,
 				t[1] ,

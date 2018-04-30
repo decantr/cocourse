@@ -16,6 +16,8 @@ public class Client extends Thread {
 	private BufferedReader r;
 	private PrintWriter o;
 	private Auction auction;
+	private boolean running = true;
+
 
 	public Client( Address ip ) {
 		this.ip = ip;
@@ -25,7 +27,11 @@ public class Client extends Thread {
 		this.ip = new Address( hostname.equals( "" ) ? "127.0.0.1" : hostname , "" , port );
 	}
 
-	public Auction getAuction () {
+	public void sendMessage( Packet p ) {
+		o.println( p );
+	}
+
+	public Auction getAuction( ) {
 		return this.auction;
 	}
 
@@ -34,26 +40,32 @@ public class Client extends Thread {
 			socket = new Socket( this.ip.getIp( ) , this.ip.getPort( ) );
 			r = new BufferedReader( new InputStreamReader( socket.getInputStream( ) ) );
 			o = new PrintWriter( socket.getOutputStream( ) , true );
-			o.println( new Packet( "handshake" , "hello" ) );
+			o.println( new Packet( "handshake" , ip.toString( ) ) );
 
-			System.out.println( this.isRunning() );
-			while ( true ) {
+			while ( running ) {
 				String t = r.readLine( );
 
-				if ( t == null || t.equals( "exit" ) ) break;
+				if ( t != null && t.length( ) > 0 ) continue;
 
-				Packet p = new Packet( t );
+				Packet p = null;
 
-				if ( t.split( ":" , 1 ).equals( "auction" ))
-					this.auction = Auction.parseAuction( p );
+				try {
+					p = Packet.parsePacket( t );
+				} catch ( Exception ignored ) {
+					System.out.println( t );
+				}
 
-				if ( t.equals( "b" ) )
-					o.println( new Packet( "command" , "test" ).send( ) );
+				if ( p != null ) switch (p.getType( )) {
+					case "auction":
+						this.auction = Auction.parseAuction( Packet.parsePacket( t ) );
+						break;
+					default:
+						System.out.println( p.toString() );
+				}
 			}
-
-		} catch ( Exception ignored ) {
+		} catch ( Exception e ) {
+			e.printStackTrace( );
 		} finally {
-
 			try {
 				socket.close( );
 			} catch ( Exception ignored ) {
@@ -62,8 +74,8 @@ public class Client extends Thread {
 		}
 	}
 
-	public boolean isRunning () {
+	public boolean isRunning( ) {
 		if ( this.socket == null ) return false;
-		return this.socket.isConnected();
+		return running;
 	}
 }

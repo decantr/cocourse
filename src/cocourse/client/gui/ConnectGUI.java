@@ -144,7 +144,6 @@ public class ConnectGUI extends javax.swing.JDialog {
 		}
 
 		if ( ip != null ) {
-			System.out.println( "a" );
 			client = new Client( ip );
 			client.start( );
 		} else txtError.setText( "Not a valid address" );

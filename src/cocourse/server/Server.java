@@ -49,40 +49,6 @@ public class Server extends Thread {
 		this.log( "log" , "server created" );
 	}
 
-
-	@Override
-	public void run( ) {
-
-		try {
-//      create new socket on the port passed in
-			this.sock = new ServerSocket( ip.getPort() );
-			this.log( "log" , "server listening on " + this.sock.getLocalPort( ) );
-
-			running = true;
-
-//			wait for requests and submit them to the pool
-			while ( true ) {
-
-				cons.add( new Connection( this , this.sock.accept( ) ) );
-
-				pool.submit( cons.get( cons.size( ) - 1 ) );
-
-				this.log( "log" , "new connection from " + cons.get( cons.size( ) - 1 ).getIp( ).toString( ) );
-
-			}
-
-		} catch ( Exception ignored ) {
-		} finally {
-			try {
-//				shutdown the pool and close the socket
-				this.log( "log" , "connection closed" );
-				pool.shutdown( );
-				sock.close( );
-			} catch ( Exception ignored ) {
-			}
-		}
-	}
-
 	public Auction getAuction( ) {
 		return auction;
 	}
@@ -90,6 +56,7 @@ public class Server extends Thread {
 	public void setAuction( Auction auction ) {
 		this.auction = auction;
 		this.log("log" , "auction created");
+		notifyClients();
 	}
 
 	public void startAuction( ) {
@@ -98,11 +65,14 @@ public class Server extends Thread {
 		this.log("log", "auction started");
 	}
 
+	public ArrayList <Connection> getCons( ) {
+		return cons;
+	}
+
 	private void notifyClients( ) {
 		for ( Connection c : this.cons ) {
 			c.sendPacket( this.getAuction().toPacket() );
 		}
-
 	}
 
 	//	method to close a Connection
@@ -155,5 +125,38 @@ public class Server extends Thread {
 	public void log( String level , String contents ) {
 		Packet p = new Packet( level , contents );
 		this.log( p );
+	}
+
+	@Override
+	public void run( ) {
+
+		try {
+//      create new socket on the port passed in
+			this.sock = new ServerSocket( ip.getPort() );
+			this.log( "log" , "server listening on " + this.sock.getLocalPort( ) );
+			this.ip.setPort( this.sock.getLocalPort( ) );
+
+			running = true;
+
+//			wait for requests and submit them to the pool
+			while ( true ) {
+
+				Connection c = new Connection( this , this.sock.accept( ) );
+				cons.add( c );
+				pool.submit( c );
+
+				this.log( "log" , "Connected " + c.getIp( ).toString( ) );
+			}
+		} catch ( Exception e ) {
+			e.printStackTrace();
+			System.exit( 0 );
+		} finally {
+//			try shutdown the pool and close the socket
+			try {
+				pool.shutdown( );
+				sock.close( );
+			} catch ( Exception ignored ) {
+			}
+		}
 	}
 }
