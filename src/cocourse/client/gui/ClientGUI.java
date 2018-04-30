@@ -191,7 +191,7 @@ public class ClientGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnPlaceBidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlaceBidActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnPlaceBidActionPerformed
 
     private void btnOpenLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOpenLogActionPerformed

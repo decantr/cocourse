@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8da36b08-8296-4b4e-a728-330fc204f059" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/cocourse/client/gui/ClientGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/client/gui/ClientGUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cocourse/client/gui/ClientGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/client/gui/ClientGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cocourse/client/gui/ConnectGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/client/gui/ConnectGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,18 +47,24 @@
       <file leaf-file-name="ServerGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="320">
+              <caret line="31" selection-start-line="31" selection-end-line="35" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#ServerGUI#0" />
                 <element signature="docComment;method#ServerGUI#0;class#ServerGUI#0" />
                 <element signature="docComment;method#initComponents#0;class#ServerGUI#0" />
+                <element signature="e#2068#2157#0" expanded="true" />
+                <element signature="e#4627#4628#0" expanded="true" />
+                <element signature="e#4694#4695#0" expanded="true" />
+                <element signature="e#8289#8290#0" expanded="true" />
+                <element signature="e#8347#8348#0" expanded="true" />
+                <element signature="e#16621#16708#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cocourse/client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
@@ -115,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectGUI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ConnectGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cocourse/client/gui/ConnectGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
+            <state relative-caret-position="266">
+              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -215,7 +221,6 @@
         <option value="$PROJECT_DIR$/src/cocourse/client/gui/connect.java" />
         <option value="$PROJECT_DIR$/src/cocourse/Address.java" />
         <option value="$PROJECT_DIR$/src/cocourse/Concur.java" />
-        <option value="$PROJECT_DIR$/src/cocourse/client/gui/ConnectGUI.java" />
         <option value="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java" />
         <option value="$PROJECT_DIR$/src/cocourse/server/gui/NewServerGUI.java" />
         <option value="$PROJECT_DIR$/src/cocourse/server/Connection.java" />
@@ -224,6 +229,7 @@
         <option value="$PROJECT_DIR$/src/cocourse/server/gui/NewAuctionGUI.java" />
         <option value="$PROJECT_DIR$/src/cocourse/Auction.java" />
         <option value="$PROJECT_DIR$/src/cocourse/client/Client.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/client/gui/ConnectGUI.java" />
       </list>
     </option>
   </component>
@@ -320,7 +326,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ClientGUI">
+  <component name="RunManager" selected="Application.ConnectGUI">
     <configuration name="Auction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cocourse.Auction" />
       <module name="cocourse" />
@@ -426,10 +432,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ConnectGUI" />
         <item itemvalue="Application.ClientGUI" />
         <item itemvalue="Application.ServerGUI" />
         <item itemvalue="Application.Auction" />
-        <item itemvalue="Application.ConnectGUI" />
         <item itemvalue="Application.serverfront (1)" />
       </list>
     </recent_temporary>
@@ -448,7 +454,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="149" y="117" width="2126" height="1227" extended-state="1" />
+    <frame x="149" y="117" width="2126" height="1227" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -683,18 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="docComment;class#ServerGUI#0" />
-            <element signature="docComment;method#ServerGUI#0;class#ServerGUI#0" />
-            <element signature="docComment;method#initComponents#0;class#ServerGUI#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/server/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -724,13 +719,6 @@
             <element signature="e#830#831#0" expanded="true" />
             <element signature="e#875#876#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/client/gui/ConnectGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -818,6 +806,31 @@
             <element signature="e#549#550#0" expanded="true" />
             <element signature="e#566#567#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="31" selection-start-line="31" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#ServerGUI#0" />
+            <element signature="docComment;method#ServerGUI#0;class#ServerGUI#0" />
+            <element signature="docComment;method#initComponents#0;class#ServerGUI#0" />
+            <element signature="e#2068#2157#0" expanded="true" />
+            <element signature="e#4627#4628#0" expanded="true" />
+            <element signature="e#4694#4695#0" expanded="true" />
+            <element signature="e#8289#8290#0" expanded="true" />
+            <element signature="e#8347#8348#0" expanded="true" />
+            <element signature="e#16621#16708#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/client/gui/ConnectGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
         </state>
       </provider>
     </entry>
