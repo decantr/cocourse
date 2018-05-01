@@ -46,6 +46,6 @@ public class Packet {
 
 	@Override
 	public String toString( ) {
-		return type + ":" + time + ": " + contents;
+		return type + ":" + time + ":" + contents;
 	}
 }

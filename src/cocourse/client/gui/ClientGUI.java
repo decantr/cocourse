@@ -5,6 +5,7 @@
  */
 package cocourse.client.gui;
 
+import cocourse.Packet;
 import cocourse.client.Client;
 
 import javax.swing.*;
@@ -22,13 +23,17 @@ public class ClientGUI extends javax.swing.JFrame {
 	 * Creates new form clientfront
 	 */
 	public ClientGUI( ) {
-		if ( client == null ) {
-			ConnectGUI c = new ConnectGUI( this , true );
-			c.setVisible( true );
-			client = c.getClient( );
-		}
+		ConnectGUI c = new ConnectGUI( this , true , client );
+		c.setVisible( true );
+		client = c.getClient( );
 
 		if ( client == null ) System.exit( 0 );
+
+		try {
+			Thread.sleep( 1000L );
+		} catch ( InterruptedException e ) {
+			e.printStackTrace( );
+		}
 
 		timer = new javax.swing.Timer( 100 , e -> {
 			this.lblCurrentTime.setText(
@@ -36,26 +41,23 @@ public class ClientGUI extends javax.swing.JFrame {
 
 			boolean r = false;
 
-			if ( this.client.getAuction( ) != null && this.client.getAuction( ).isRunning( ) ) {
+			if ( this.client.getAuction( ) != null && this.client.getAuction( ).isRunning( ) )
 				r = true;
-			}
 
-			System.out.println( r );
-
-			this.lblItemName.setText( r ? this.client.getAuction( ).getName() : "No Auction" );
-			this.txtDesc.setText( r ? this.client.getAuction( ).getDesc() : "" );
+			this.lblItemName.setText( r ? this.client.getAuction( ).getName( ) : "No Auction" );
+			this.txtDesc.setText( r ? this.client.getAuction( ).getDesc( ) : "" );
 			this.lblTimeLeft.setText( r ?
-					new SimpleDateFormat( "mm:ss" ).format(  this.client.getAuction( ).timeLeft( )  ) : "" );
+					new SimpleDateFormat( "mm:ss" ).format( this.client.getAuction( ).timeLeft( ) ) : "" );
 
 			this.txtHighBid.setText( r ? "" + this.client.getAuction( ).getBidHigh( ).getAmount( ) : "" );
-
 			this.txtHighBidder.setText( r ? this.client.getAuction( ).getBidHigh( ).getUser( ) : "" );
 
 		} );
 
-		timer.start();
+		timer.start( );
 
 		initComponents( );
+
 	}
 
 	/**
@@ -119,6 +121,7 @@ public class ClientGUI extends javax.swing.JFrame {
 
 		lblItemName.setText( "itemname" );
 
+		txtDesc.setEditable( false );
 		txtDesc.setColumns( 20 );
 		txtDesc.setRows( 5 );
 		jScrollPane1.setViewportView( txtDesc );
@@ -247,6 +250,12 @@ public class ClientGUI extends javax.swing.JFrame {
 	}// </editor-fold>//GEN-END:initComponents
 
 	private void btnPlaceBidActionPerformed( java.awt.event.ActionEvent evt ) {//GEN-FIRST:event_btnPlaceBidActionPerformed
+		try {
+			double d = Double.parseDouble( jTextField1.getText( ) );
+			client.makeBid( d );
+		} catch ( Exception ignored ) {
+			JOptionPane.showMessageDialog( this , "Bad bid type" );
+		}
 
 	}//GEN-LAST:event_btnPlaceBidActionPerformed
 

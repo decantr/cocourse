@@ -6,7 +6,7 @@ public class Auction {
 	private String name;
 	private String desc;
 	private Bid bidHigh;
-	private boolean running;
+	public boolean running = false;
 	private long duration;
 
 	private long startTime;
@@ -19,19 +19,19 @@ public class Auction {
 		this.desc = desc;
 		this.bidHigh = bid;
 		this.duration = duration;
-		bidHistory = new ArrayList <>( );
-		this.running = false;
+		this.bidHistory = new ArrayList <>( );
 	}
 
 	public Auction( String name , String desc , Bid bid , long duration , boolean isrunning ) {
 		this.name = name;
 		this.desc = desc;
 		this.bidHigh = bid;
+		this.bidHistory = new ArrayList <>( );
 		this.duration = duration;
 		this.running = isrunning;
 	}
 
-	public boolean bid( Bid b ) {
+	public synchronized boolean bid( Bid b ) {
 		if ( b.getAmount( ) <= this.bidHigh.getAmount( ) ) return false;
 
 		this.bidHistory.add( this.bidHigh );
@@ -64,7 +64,7 @@ public class Auction {
 	}
 
 	public boolean isRunning( ) {
-		return this.getEndTime( ) > System.currentTimeMillis( );
+		return running;
 	}
 
 	public long timeLeft( ) {
@@ -74,24 +74,22 @@ public class Auction {
 	public void start( ) {
 		this.startTime = System.currentTimeMillis( );
 		this.endTime = this.startTime + (this.duration * 1000);
-		this.running = !running;
+		this.running = true;
 	}
 
 	public static Auction parseAuction( Packet p ) {
 
 		String[] t = p.getContents( ).split( ";" );
-		System.out.println( t.length );
 		return new Auction(
 				t[0] ,
 				t[1] ,
 				Bid.parseBid( t[2] ) ,
 				Long.parseLong( t[3] ) ,
 				Boolean.parseBoolean( t[4] ) );
-
 	}
 
 	public Packet toPacket( ) {
-		return new Packet( "auction" , this.toString( ) );
+		return new Packet( "auc" , this.toString( ) );
 	}
 
 	public String toString( ) {

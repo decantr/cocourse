@@ -7,13 +7,13 @@ public class Bid {
 	private long time;
 
 	public Bid( String user , double amount ) {
-		this.user = user;
+		this.user = user.equals( "" ) ? "default" : user;
 		this.amount = amount;
 		this.time = System.currentTimeMillis( );
 	}
 
 	public Bid( String user , double amount , long time ) {
-		this.user = user;
+		this.user = user.equals( "" ) ? "default" : user;
 		this.amount = amount;
 		this.time = time;
 	}

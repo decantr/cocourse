@@ -15,8 +15,9 @@ public class ConnectGUI extends javax.swing.JDialog {
 
 	private Client client;
 
-	public ConnectGUI( java.awt.Frame parent , boolean modal ) {
+	public ConnectGUI( java.awt.Frame parent , boolean modal, Client client) {
 		super( parent , modal );
+		this.client = client;
 		initComponents( );
 		txtError.setText( "" );
 	}
@@ -135,6 +136,7 @@ public class ConnectGUI extends javax.swing.JDialog {
 	private void btnConnectActionPerformed( java.awt.event.ActionEvent evt ) {//GEN-FIRST:event_btnConnectActionPerformed
 		txtError.setText( "" );
 		Address ip = null;
+		String name = null;
 
 		if ( !txtAddress.getText( ).equals( "" ) ) {
 
@@ -143,10 +145,15 @@ public class ConnectGUI extends javax.swing.JDialog {
 			if ( t.length == 2 ) ip = new Address( t[0] , Integer.parseInt( t[1] ) );
 		}
 
-		if ( ip != null ) {
-			client = new Client( ip );
+		if ( !txtUsername.getText( ).equals( "" ) ) {
+			name = txtUsername.getText();
+		} else txtError.setText( "Not a valid username" );
+
+		if ( ip != null && name != null) {
+			client = new Client( name  ,ip );
 			client.start( );
-		} else txtError.setText( "Not a valid address" );
+		} else if (txtError.getText().equals( "" ) )
+			txtError.setText( "Not a valid address" );
 
 		try {
 			Thread.sleep( 500L );

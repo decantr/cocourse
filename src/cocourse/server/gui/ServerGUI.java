@@ -54,7 +54,7 @@ public class ServerGUI extends javax.swing.JFrame {
 					this.txtTimeLeft.setText(
 							new SimpleDateFormat( "mm:ss" ).format( this.server.getAuction( ).timeLeft( ) ) );
 
-					this.txtHighestBid.setText( "" + this.server.getAuction( ).getBidHigh( ).getAmount( ) );
+					this.txtHighestBid.setText( "" + this.server.getAuction( ).getBidHigh( ).getAmount() );
 
 					this.txtHighestBidder.setText( this.server.getAuction( ).getBidHigh( ).getUser( ) );
 				}
@@ -325,7 +325,7 @@ public class ServerGUI extends javax.swing.JFrame {
 		swap( );
 
 		this.txtAuctionName.setText( this.server.getAuction( ).getName( ) );
-		this.txtHighestBid.setText( "" + this.server.getAuction( ).getBidHigh( ) );
+		this.txtHighestBid.setText( "" + this.server.getAuction( ).getBidHigh( ).getAmount() );
 	}//GEN-LAST:event_btnNewActionPerformed
 
 	private void btnStartAuctionActionPerformed( java.awt.event.ActionEvent evt ) {//GEN-FIRST:event_btnStartAuctionActionPerformed

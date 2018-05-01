@@ -1,6 +1,7 @@
 package cocourse.server;
 
 import cocourse.Address;
+import cocourse.Bid;
 import cocourse.Packet;
 
 import java.io.BufferedReader;
@@ -14,7 +15,6 @@ public class Connection implements Runnable {
 	private Server s;
 	private BufferedReader r;
 	private PrintWriter o;
-	private boolean run = true;
 
 	private Address ip;
 
@@ -24,18 +24,11 @@ public class Connection implements Runnable {
 		this.ip = new Address(
 				i.getInetAddress( ).getHostName( ) ,
 				i.getInetAddress( ).getHostAddress( ) ,
-				i.getLocalPort( ));
+				i.getLocalPort( ) );
 	}
 
-	public void sendPacket( Packet packet) {
+	public void sendPacket( Packet packet ) {
 		this.o.println( packet );
-	}
-
-	public void close() {
-		try {
-			i.close( );
-		} catch ( Exception ignored ) {
-		}
 	}
 
 	@Override
@@ -47,24 +40,56 @@ public class Connection implements Runnable {
 			o = new PrintWriter( i.getOutputStream( ) , true );
 
 //			notify the user they connected
-			o.println(new Packet(
-					"log" , "connected " + s.getIp().toString() ));
+			sendPacket( new Packet(
+					"log" , "connected " + s.getIp( ).toString( ) ) );
 
-			while ( run ) {
+//			get auction info
+			sendPacket( s.getAuctionPacket() );
+
+			while ( true ) {
+
 				String t = r.readLine( );
 
-				if ( t == null || t.length() == 0 ) continue;
+				if ( t == null || t.length( ) == 0 ) continue;
 
-				System.out.println( t );
+				Packet p = null;
 
-				Packet p = Packet.parsePacket(t);
+				try {
+					p = Packet.parsePacket( t );
+				} catch ( Exception ignored ) {
+					System.out.println( t );
+				}
 
-				if ( t.equals( "b" ) )
-					o.println( new Packet( "command" , "test" ).send( ) );
+				if ( p != null ) switch (p.getType( )) {
+					case "get":
+						sendPacket( s.getAuctionPacket() );
+						s.log( p );
+						break;
+					case "bid":
+						s.bid( Bid.parseBid( p.getContents( ) ) );
+						s.log( p );
+						break;
+					case "log":
+						s.log( p );
+						break;
+					default:
+						System.out.println( p.toString( ) );
+						s.log( p );
+						break;
+				}
+
 			}
-			close();
-
-		} catch ( Exception ignored ) {}
+		} catch ( Exception e ) {
+			e.printStackTrace();
+		} finally {
+			try {
+				s.log( "log" , ip.toString( ) + ":closed" );
+				r.close( );
+				o.close( );
+				i.close( );
+			} catch ( Exception ignored ) {
+			}
+		}
 	}
 
 	public Address getIp( ) {

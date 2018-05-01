@@ -2,6 +2,7 @@ package cocourse.server;
 
 import cocourse.Address;
 import cocourse.Auction;
+import cocourse.Bid;
 import cocourse.Packet;
 
 import java.net.InetAddress;
@@ -47,15 +48,21 @@ public class Server extends Thread {
 
 		this.log = new ArrayList <>( );
 		this.log( "log" , "server created" );
+		this.log("log", ip.toString());
 	}
 
 	public Auction getAuction( ) {
 		return auction;
 	}
 
+	public Packet getAuctionPacket( ) {
+		return auction != null ? auction.toPacket( ) : new Packet( "nuc", "" );
+	}
+
 	public void setAuction( Auction auction ) {
 		this.auction = auction;
 		this.log("log" , "auction created");
+		this.log("log", this.auction.toString());
 		notifyClients();
 	}
 
@@ -71,41 +78,12 @@ public class Server extends Thread {
 
 	private void notifyClients( ) {
 		for ( Connection c : this.cons ) {
-			c.sendPacket( this.getAuction().toPacket() );
+			c.sendPacket( getAuctionPacket( ) );
 		}
-	}
-
-	//	method to close a Connection
-	public void close( Connection r ) {
-		r.close( );
-		this.cons.remove( r );
 	}
 
 	public boolean isRunning( ) {
 		return running;
-	}
-
-	//	method to check port availability
-	public boolean portFree( int p ) {
-
-		ServerSocket s = null;
-
-		if ( p == 0 || ( p < max && p > min )) {
-			try {
-
-				s = new ServerSocket( p );
-				return true;
-
-			} catch ( Exception ignored ) {
-			} finally {
-				if ( s != null )
-					try {
-						s.close( );
-					} catch ( Exception ignored ) {
-					}
-			}
-		}
-		return false;
 	}
 
 	public Address getIp( ) {
@@ -123,8 +101,7 @@ public class Server extends Thread {
 	}
 
 	public void log( String level , String contents ) {
-		Packet p = new Packet( level , contents );
-		this.log( p );
+		this.log(new Packet( level , contents ) );
 	}
 
 	@Override
@@ -158,5 +135,33 @@ public class Server extends Thread {
 			} catch ( Exception ignored ) {
 			}
 		}
+	}
+
+	//	method to check port availability
+	public static boolean portFree( int p ) {
+
+		ServerSocket s = null;
+
+		if ( p == 0 || ( p < max && p > min )) {
+			try {
+
+				s = new ServerSocket( p );
+				return true;
+
+			} catch ( Exception ignored ) {
+			} finally {
+				if ( s != null )
+					try {
+						s.close( );
+					} catch ( Exception ignored ) {
+					}
+			}
+		}
+		return false;
+	}
+
+	public void bid( Bid bid ) {
+		auction.bid( bid );
+		notifyClients();
 	}
 }
