@@ -41,7 +41,7 @@ public class ClientGUI extends javax.swing.JFrame {
 
 			boolean r = false;
 
-			if ( this.client.getAuction( ) )
+			if ( this.client.getAuction( ) != null )
 				r = true;
 
 			this.lblItemName.setText( r ? this.client.getAuction( ).getUser( ) : "No Auction" );
@@ -59,7 +59,7 @@ public class ClientGUI extends javax.swing.JFrame {
 			this.txtHighBid.setText( r ? "" + this.client.getAuction( ).getBidHigh( ).getAmount( ) : "" );
 			this.txtHighBidder.setText( r ? this.client.getAuction( ).getBidHigh( ).getUser( ) : "" );
 
-			if ( this.client.getAuction( ) != null && this.client.getAuction( ).getEnded( ) && !end ) {
+			if ( r && this.client.getAuction( ).getEnded( ) && !end ) {
 				end = true;
 				JOptionPane.showMessageDialog( this ,
 						client.getAuction( ).getBidHigh( ).getUser( ).equals( this.client.getUser( ) ) ?
