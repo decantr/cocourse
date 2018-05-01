@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8da36b08-8296-4b4e-a728-330fc204f059" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/cocourse/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/client/gui/ClientGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/client/gui/ClientGUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/client/gui/ClientGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/client/gui/ClientGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/server/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/Connection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cocourse/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientGUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClientGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cocourse/client/gui/ClientGUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="367">
@@ -74,13 +71,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerGUI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ServerGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-477">
-              <caret line="329" selection-start-line="329" selection-end-line="329" />
+            <state relative-caret-position="560">
+              <caret line="360" column="22" selection-start-line="360" selection-start-column="22" selection-end-line="360" selection-end-column="22" />
               <folding>
                 <element signature="docComment;class#ServerGUI#0" />
+                <element signature="e#2335#2424#0" expanded="true" />
+                <element signature="e#4939#4940#0" expanded="true" />
+                <element signature="e#5006#5007#0" expanded="true" />
+                <element signature="e#8601#8602#0" expanded="true" />
+                <element signature="e#8659#8660#0" expanded="true" />
+                <element signature="e#10529#10530#0" expanded="true" />
+                <element signature="e#10588#10589#0" expanded="true" />
+                <element signature="e#18269#18356#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,13 +202,13 @@
         <option value="$PROJECT_DIR$/src/cocourse/client/gui/ConnectGUI.java" />
         <option value="$PROJECT_DIR$/src/cocourse/Bid.java" />
         <option value="$PROJECT_DIR$/src/cocourse/server/Update.java" />
-        <option value="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java" />
         <option value="$PROJECT_DIR$/src/cocourse/Auction.java" />
         <option value="$PROJECT_DIR$/src/cocourse/server/gui/NewAuctionGUI.java" />
         <option value="$PROJECT_DIR$/src/cocourse/client/gui/ClientGUI.java" />
         <option value="$PROJECT_DIR$/src/cocourse/server/Server.java" />
         <option value="$PROJECT_DIR$/src/cocourse/server/Connection.java" />
         <option value="$PROJECT_DIR$/src/cocourse/client/Client.java" />
+        <option value="$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java" />
       </list>
     </option>
   </component>
@@ -709,16 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-477">
-          <caret line="329" selection-start-line="329" selection-end-line="329" />
-          <folding>
-            <element signature="docComment;class#ServerGUI#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cocourse/Packet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -789,6 +784,24 @@
             <element signature="e#13678#13765#0" expanded="true" />
             <element signature="e#15059#15060#0" expanded="true" />
             <element signature="e#15105#15106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cocourse/server/gui/ServerGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="360" column="22" selection-start-line="360" selection-start-column="22" selection-end-line="360" selection-end-column="22" />
+          <folding>
+            <element signature="docComment;class#ServerGUI#0" />
+            <element signature="e#2335#2424#0" expanded="true" />
+            <element signature="e#4939#4940#0" expanded="true" />
+            <element signature="e#5006#5007#0" expanded="true" />
+            <element signature="e#8601#8602#0" expanded="true" />
+            <element signature="e#8659#8660#0" expanded="true" />
+            <element signature="e#10529#10530#0" expanded="true" />
+            <element signature="e#10588#10589#0" expanded="true" />
+            <element signature="e#18269#18356#0" expanded="true" />
           </folding>
         </state>
       </provider>
