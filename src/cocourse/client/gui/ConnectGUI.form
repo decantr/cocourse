@@ -2,22 +2,22 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property user="defaultCloseOperation" type="int" value="2"/>
   </Properties>
   <SyntheticProperties>
-    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty user="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty user="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <AuxValues>
-    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
-    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
-    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
-    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
-    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
-    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
-    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
-    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
-    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue user="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue user="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue user="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue user="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue user="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue user="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue user="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue user="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue user="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
   </AuxValues>
 
   <Layout>
@@ -41,7 +41,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" user="jPanel1">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -104,40 +104,40 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblGreeter">
+        <Component class="javax.swing.JLabel" user="lblGreeter">
           <Properties>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="choose a username and a server to connect to"/>
+            <Property user="horizontalAlignment" type="int" value="0"/>
+            <Property user="text" type="java.lang.String" value="choose a username and a server to connect to"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblUser">
+        <Component class="javax.swing.JLabel" user="lblUser">
           <Properties>
-            <Property name="text" type="java.lang.String" value="user"/>
+            <Property user="text" type="java.lang.String" value="user"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnConnect">
+        <Component class="javax.swing.JButton" user="btnConnect">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Connect"/>
+            <Property user="text" type="java.lang.String" value="Connect"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnConnectActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtUsername">
+        <Component class="javax.swing.JTextField" user="txtUsername">
         </Component>
-        <Component class="javax.swing.JLabel" name="lblAddress">
+        <Component class="javax.swing.JLabel" user="lblAddress">
           <Properties>
-            <Property name="text" type="java.lang.String" value="ip:port"/>
+            <Property user="text" type="java.lang.String" value="ip:port"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtAddress">
+        <Component class="javax.swing.JTextField" user="txtAddress">
           <Properties>
-            <Property name="text" type="java.lang.String" value="localhost:8182"/>
+            <Property user="text" type="java.lang.String" value="localhost:8182"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="txtError">
+        <Component class="javax.swing.JLabel" user="txtError">
           <Properties>
-            <Property name="text" type="java.lang.String" value="a"/>
+            <Property user="text" type="java.lang.String" value="a"/>
           </Properties>
         </Component>
       </SubComponents>

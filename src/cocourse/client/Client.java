@@ -12,15 +12,15 @@ import java.net.Socket;
 
 public class Client extends Thread {
 
-	private String name;
+	private String user;
 	private Address ip;
 	private Socket socket;
 	private BufferedReader r;
 	private PrintWriter o;
 	private Auction auction;
 
-	public Client( String name , Address ip ) {
-		this.name = name;
+	public Client( String user , Address ip ) {
+		this.user = user;
 		this.ip = ip;
 	}
 
@@ -39,10 +39,13 @@ public class Client extends Thread {
 
 	public void makeBid( double amount ) {
 		amount = (double) Math.round(amount * 100) / 100;
-		Bid b = new Bid( name , amount );
+		Bid b = new Bid( user , amount );
 		if ( b.getAmount( ) > auction.getBidHigh( ).getAmount( ) )
 			sendPacket( new Packet( "bid" , b.toString( ) ) );
+	}
 
+	public String getUser( ) {
+		return user;
 	}
 
 	public void sendPacket( Packet packet ) {
@@ -69,7 +72,6 @@ public class Client extends Thread {
 
 				switch (p.getType( )) {
 					case "auc":
-						System.out.println( p );
 						auction = Auction.parseAuction( p );
 						break;
 					case "nauc":

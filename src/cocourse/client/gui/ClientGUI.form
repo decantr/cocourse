@@ -2,7 +2,7 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Container class="javax.swing.JDialog" name="diaLog">
+    <Container class="javax.swing.JDialog" user="diaLog">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -25,43 +25,43 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+        <Container class="javax.swing.JScrollPane" user="jScrollPane2">
           <Properties>
-            <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
-            <Property name="verticalScrollBarPolicy" type="int" value="22"/>
-            <Property name="autoscrolls" type="boolean" value="true"/>
+            <Property user="horizontalScrollBarPolicy" type="int" value="31"/>
+            <Property user="verticalScrollBarPolicy" type="int" value="22"/>
+            <Property user="autoscrolls" type="boolean" value="true"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+            <AuxValue user="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="jTextArea1">
+            <Component class="javax.swing.JTextArea" user="jTextArea1">
               <Properties>
-                <Property name="columns" type="int" value="20"/>
-                <Property name="rows" type="int" value="5"/>
+                <Property user="columns" type="int" value="20"/>
+                <Property user="rows" type="int" value="5"/>
               </Properties>
             </Component>
           </SubComponents>
         </Container>
       </SubComponents>
     </Container>
-    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+    <Menu class="javax.swing.JMenuBar" user="jMenuBar1">
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="jMenu1">
+        <Menu class="javax.swing.JMenu" user="jMenu1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="File"/>
+            <Property user="text" type="java.lang.String" value="File"/>
           </Properties>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu2">
+        <Menu class="javax.swing.JMenu" user="jMenu2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Log"/>
+            <Property user="text" type="java.lang.String" value="Log"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="btnOpenLog">
+            <MenuItem class="javax.swing.JMenuItem" user="btnOpenLog">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Open Log"/>
+                <Property user="text" type="java.lang.String" value="Open Log"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnOpenLogActionPerformed"/>
@@ -73,23 +73,23 @@
     </Menu>
   </NonVisualComponents>
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property user="defaultCloseOperation" type="int" value="3"/>
   </Properties>
   <SyntheticProperties>
-    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
-    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty user="menuBar" type="java.lang.String" value="jMenuBar1"/>
+    <SyntheticProperty user="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty user="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <AuxValues>
-    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
-    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
-    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
-    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
-    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
-    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
-    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
-    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
-    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue user="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue user="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue user="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue user="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue user="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue user="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue user="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue user="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue user="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
   </AuxValues>
 
   <Layout>
@@ -191,82 +191,82 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lblItemName">
+    <Component class="javax.swing.JLabel" user="lblItemName">
       <Properties>
-        <Property name="text" type="java.lang.String" value="itemname"/>
+        <Property user="text" type="java.lang.String" value="itemname"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+    <Container class="javax.swing.JScrollPane" user="jScrollPane1">
       <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+        <AuxValue user="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="txtDesc">
+        <Component class="javax.swing.JTextArea" user="txtDesc">
           <Properties>
-            <Property name="editable" type="boolean" value="false"/>
-            <Property name="columns" type="int" value="20"/>
-            <Property name="rows" type="int" value="5"/>
+            <Property user="editable" type="boolean" value="false"/>
+            <Property user="columns" type="int" value="20"/>
+            <Property user="rows" type="int" value="5"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="lblTime">
+    <Component class="javax.swing.JLabel" user="lblTime">
       <Properties>
-        <Property name="text" type="java.lang.String" value="timeleft"/>
+        <Property user="text" type="java.lang.String" value="timeleft"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" user="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="current bid"/>
+        <Property user="text" type="java.lang.String" value="current bid"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtHighBid">
+    <Component class="javax.swing.JTextField" user="txtHighBid">
       <Properties>
-        <Property name="editable" type="boolean" value="false"/>
+        <Property user="editable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" user="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Bidder"/>
+        <Property user="text" type="java.lang.String" value="Bidder"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtHighBidder">
+    <Component class="javax.swing.JTextField" user="txtHighBidder">
       <Properties>
-        <Property name="editable" type="boolean" value="false"/>
+        <Property user="editable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JSeparator" name="jSeparator1">
+    <Component class="javax.swing.JSeparator" user="jSeparator1">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" user="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Place Bid: "/>
+        <Property user="text" type="java.lang.String" value="Place Bid: "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" user="jTextField1">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" user="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#xa3;"/>
+        <Property user="text" type="java.lang.String" value="&#xa3;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnPlaceBid">
+    <Component class="javax.swing.JButton" user="btnPlaceBid">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Bid"/>
+        <Property user="text" type="java.lang.String" value="Bid"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlaceBidActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblTimeLeft">
+    <Component class="javax.swing.JLabel" user="lblTimeLeft">
       <Properties>
-        <Property name="text" type="java.lang.String" value="00:00"/>
+        <Property user="text" type="java.lang.String" value="00:00"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblCurrentTime">
+    <Component class="javax.swing.JLabel" user="lblCurrentTime">
       <Properties>
-        <Property name="text" type="java.lang.String" value="00:00:00"/>
+        <Property user="text" type="java.lang.String" value="00:00:00"/>
       </Properties>
     </Component>
   </SubComponents>

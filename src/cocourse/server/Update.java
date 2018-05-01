@@ -11,6 +11,7 @@ public class Update extends Thread {
 
 	@Override
 	public void run(){
+		going = true;
 		while (going) {
 			try {
 				Thread.sleep( 100L );
@@ -20,7 +21,10 @@ public class Update extends Thread {
 
 			synchronized (s) {
 				if ( System.currentTimeMillis() < s.getAuction( ).getEndTime( )) Thread.yield( );
-				else s.stopAuction();
+				else {
+					s.stopAuction();
+					going = false;
+				}
 			}
 		}
 	}

@@ -27,6 +27,7 @@ public class Server extends Thread {
 	private Address ip;
 	private Auction auction;
 	private boolean running;
+	private Update updater;
 
 	public Server( int port ) {
 //		double check if the port is valid
@@ -49,6 +50,10 @@ public class Server extends Thread {
 		this.log = new ArrayList <>( );
 		this.log( "log" , "server created" );
 		this.log("log", ip.toString());
+
+		updater = new Update( this );
+		updater.setDaemon( true );
+		updater.setPriority( Thread.MIN_PRIORITY );
 	}
 
 	public Auction getAuction( ) {
@@ -69,7 +74,15 @@ public class Server extends Thread {
 	public void startAuction( ) {
 		this.auction.start();
 		this.notifyClients();
+		updater.start();
 		this.log("log", "auction started");
+	}
+
+	public void stopAuction( ) {
+		this.auction.stop();
+		this.notifyClients();
+		this.notifyClients( new Packet( "end", "" ));
+		this.log("log", "auction ended");
 	}
 
 	public ArrayList <Connection> getCons( ) {
@@ -165,11 +178,5 @@ public class Server extends Thread {
 	public void bid( Bid bid ) {
 		auction.bid( bid );
 		notifyClients();
-	}
-
-	public void stopAuction( ) {
-		auction.stop();
-		notifyClients();
-		notifyClients( new Packet( "end", "" ));
 	}
 }

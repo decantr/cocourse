@@ -21,6 +21,7 @@ public class ServerGUI extends javax.swing.JFrame {
 	private Server server;
 	private Timer timer;
 	private int logline = 0;
+	private boolean end = false;
 
 	/**
 	 * Creates new form serverfront
@@ -29,49 +30,54 @@ public class ServerGUI extends javax.swing.JFrame {
 
 		startTime = System.currentTimeMillis( );
 
-		if ( server == null ) {
-			NewServerGUI d = new NewServerGUI( this , true , this.server );
-			d.setVisible( true );
-			server = d.getServer( );
-		}
+		NewServerGUI d = new NewServerGUI( this , true , server );
+		d.setVisible( true );
+		server = d.getServer( );
 
 		server.setDaemon( true );
 		server.start( );
 
-
 		timer = new javax.swing.Timer( 100 , e -> {
-			if ( server.isRunning( ) ) {
+			this.txtTime.setText(
+					new SimpleDateFormat( "hh:mm:ss" ).format( System.currentTimeMillis( ) ) );
 
+			if ( server.isRunning( ) ) {
 				while ( logline < server.getLog( ).size( ) ) {
 					txtLog.append( server.getLog( ).get( logline ).toString( ) + "\n" );
 					logline++;
 				}
-
-				this.txtTime.setText(
-						new SimpleDateFormat( "hh:mm:ss" ).format( System.currentTimeMillis( ) ) );
 
 				if ( this.server.getAuction( ) != null && this.server.getAuction( ).isRunning( ) ) {
 
 					this.txtTimeLeft.setText(
 							new SimpleDateFormat( "mm:ss" ).format( this.server.getAuction( ).timeLeft( ) ) );
 
-					this.txtHighestBid.setText( "" + this.server.getAuction( ).getBidHigh( ).getAmount() );
+					this.txtHighestBid.setText( "" + this.server.getAuction( ).getBidHigh( ).getAmount( ) );
 
 					this.txtHighestBidder.setText( this.server.getAuction( ).getBidHigh( ).getUser( ) );
 				}
+				if ( this.server.getAuction( ) != null && this.server.getAuction( ).getEnded( ) && !end) end( );
 			}
+
 		} );
 
 		initComponents( );
 
+		this.txtIp.setText( "" + server.getIp( ).toString( ) );
 		pnlInfo.setVisible( false );
 
 		timer.start( );
-
-		this.txtIp.setText( "" + server.getIp( ).toString( ) );
 	}
 
-	void swap( ) {
+	private void end( ) {
+		JOptionPane.showMessageDialog( this ,
+				server.getAuction( ).getBidHigh( ).getUser( ) + " won!"
+		);
+		end = true;
+		swap( );
+	}
+
+	private void swap( ) {
 		pnlInfo.setVisible( !pnlInfo.isVisible( ) );
 		btnNew.setVisible( !btnNew.isVisible( ) );
 	}
@@ -325,8 +331,10 @@ public class ServerGUI extends javax.swing.JFrame {
 
 		swap( );
 
-		this.txtAuctionName.setText( this.server.getAuction( ).getName( ) );
-		this.txtHighestBid.setText( "" + this.server.getAuction( ).getBidHigh( ).getAmount() );
+		this.txtAuctionName.setText( this.server.getAuction( ).getUser( ) );
+		this.txtHighestBid.setText( "" + this.server.getAuction( ).getBidHigh( ).getAmount( ) );
+		this.btnStartAuction.setEnabled( true );
+		end = false;
 	}//GEN-LAST:event_btnNewActionPerformed
 
 	private void btnStartAuctionActionPerformed( java.awt.event.ActionEvent evt ) {//GEN-FIRST:event_btnStartAuctionActionPerformed

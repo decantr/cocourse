@@ -44,7 +44,7 @@ public class Connection implements Runnable {
 					"log" , "connected " + s.getIp( ).toString( ) ) );
 
 //			get auction info
-			sendPacket( s.getAuctionPacket() );
+			sendPacket( s.getAuctionPacket( ) );
 
 			while ( true ) {
 
@@ -52,17 +52,11 @@ public class Connection implements Runnable {
 
 				if ( t == null || t.length( ) == 0 ) continue;
 
-				Packet p = null;
+				Packet p = Packet.parsePacket( t );
 
-				try {
-					p = Packet.parsePacket( t );
-				} catch ( Exception ignored ) {
-					System.out.println( t );
-				}
-
-				if ( p != null ) switch (p.getType( )) {
+				switch (p.getType( )) {
 					case "get":
-						sendPacket( s.getAuctionPacket() );
+						sendPacket( s.getAuctionPacket( ) );
 						s.log( p );
 						break;
 					case "bid":
@@ -80,7 +74,7 @@ public class Connection implements Runnable {
 
 			}
 		} catch ( Exception e ) {
-			e.printStackTrace();
+			e.printStackTrace( );
 		} finally {
 			try {
 				s.log( "log" , ip.toString( ) + ":closed" );

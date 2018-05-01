@@ -3,7 +3,7 @@ package cocourse;
 import java.util.ArrayList;
 
 public class Auction {
-	private String name;
+	private String user;
 	private String desc;
 	private Bid bidHigh;
 	private boolean running = false;
@@ -15,16 +15,16 @@ public class Auction {
 
 	private ArrayList <Bid> bidHistory;
 
-	public Auction( String name , String desc , Bid bid , long duration ) {
-		this.name = name;
+	public Auction( String user , String desc , Bid bid , long duration ) {
+		this.user = user;
 		this.desc = desc;
 		this.bidHigh = bid;
 		this.duration = duration;
 		this.bidHistory = new ArrayList <>( );
 	}
 
-	public Auction( String name , String desc , Bid bid , long duration , boolean isrunning ) {
-		this.name = name;
+	public Auction( String user , String desc , Bid bid , long duration , boolean isrunning ) {
+		this.user = user;
 		this.desc = desc;
 		this.bidHigh = bid;
 		this.bidHistory = new ArrayList <>( );
@@ -41,8 +41,8 @@ public class Auction {
 		return true;
 	}
 
-	public String getName( ) {
-		return name;
+	public String getUser( ) {
+		return user;
 	}
 
 	public String getDesc( ) {
@@ -81,6 +81,7 @@ public class Auction {
 
 	public void stop( ) {
 		this.running = false;
+		this.setEnded();
 	}
 
 	public static Auction parseAuction( Packet p ) {
@@ -99,7 +100,7 @@ public class Auction {
 	}
 
 	public String toString( ) {
-		return this.getName( ) + ";" +
+		return this.getUser( ) + ";" +
 				this.getDesc( ) + ";" +
 				this.getBidHigh( ) + ";" +
 				this.getEndTime( ) + ";" +

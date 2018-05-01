@@ -28,8 +28,6 @@ public class ClientGUI extends javax.swing.JFrame {
 
 		if ( client == null ) System.exit( 0 );
 
-		client.setDaemon( true );
-
 		try {
 			Thread.sleep( 1000L );
 		} catch ( InterruptedException e ) {
@@ -45,7 +43,7 @@ public class ClientGUI extends javax.swing.JFrame {
 			if ( this.client.getAuction( ) != null && this.client.getAuction( ).isRunning( ) )
 				r = true;
 
-			this.lblItemName.setText( r ? this.client.getAuction( ).getName( ) : "No Auction" );
+			this.lblItemName.setText( r ? this.client.getAuction( ).getUser( ) : "No Auction" );
 			this.txtDesc.setText( r ? this.client.getAuction( ).getDesc( ) : "" );
 			this.lblTimeLeft.setText( r ?
 					new SimpleDateFormat( "mm:ss" ).format( this.client.getAuction( ).timeLeft( ) ) : "" );
@@ -66,13 +64,13 @@ public class ClientGUI extends javax.swing.JFrame {
 	private void end( ) {
 		timer.stop( );
 
-		this.lblTimeLeft.setText( new SimpleDateFormat( "mm:ss" ).format( this.client.getAuction( ).getEndTime( ) ) );
+		this.lblTimeLeft.setText( new SimpleDateFormat( "mm:ss" ).format( 0L ) );
 
 		this.txtHighBid.setText( "" + this.client.getAuction( ).getBidHigh( ).getAmount( ) );
 		this.txtHighBidder.setText( this.client.getAuction( ).getBidHigh( ).getUser( ) );
 
 		JOptionPane.showMessageDialog( this ,
-				client.getAuction().getBidHigh().getUser().equals(client.getName()) ?
+				client.getAuction().getBidHigh().getUser().equals(this.client.getUser()) ?
 						"You won! Congratulations" : "You lost! " + client.getAuction().getBidHigh().getUser() +" won!"
 				);
 
