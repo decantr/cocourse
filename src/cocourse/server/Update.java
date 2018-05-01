@@ -1,11 +1,9 @@
 package cocourse.server;
 
-
-import cocourse.Packet;
-
 public class Update extends Thread {
 
 	private Server s;
+	private boolean going;
 
 	public Update( Server s ) {
 		this.s = s;
@@ -13,22 +11,17 @@ public class Update extends Thread {
 
 	@Override
 	public void run(){
-		while (true) {
+		while (going) {
 			try {
-				Thread.sleep( 1000L );
-				Thread.yield( );
+				Thread.sleep( 100L );
 			} catch ( InterruptedException e ) {
 				e.printStackTrace( );
 			}
 
-			Packet p;
-
-			if ( s.getAuction( ) != null ) p = s.getAuction( ).toPacket( );
-			else p = new Packet( "auction" , "none" );
-
-			if ( s.getCons( ).size( ) > 0 )
-				s.getCons( ).get( s.getCons( ).size( ) - 1 ).sendPacket( p );
-			s.log( p );
+			synchronized (s) {
+				if ( System.currentTimeMillis() < s.getAuction( ).getEndTime( )) Thread.yield( );
+				else s.stopAuction();
+			}
 		}
 	}
 }

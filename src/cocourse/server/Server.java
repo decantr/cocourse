@@ -77,9 +77,11 @@ public class Server extends Thread {
 	}
 
 	private void notifyClients( ) {
-		for ( Connection c : this.cons ) {
-			c.sendPacket( getAuctionPacket( ) );
-		}
+		for ( Connection c : this.cons ) c.sendPacket( getAuctionPacket( ) );
+	}
+
+	private void notifyClients( Packet p ) {
+		for ( Connection c : this.cons ) c.sendPacket( p );
 	}
 
 	public boolean isRunning( ) {
@@ -163,5 +165,11 @@ public class Server extends Thread {
 	public void bid( Bid bid ) {
 		auction.bid( bid );
 		notifyClients();
+	}
+
+	public void stopAuction( ) {
+		auction.stop();
+		notifyClients();
+		notifyClients( new Packet( "end", "" ));
 	}
 }

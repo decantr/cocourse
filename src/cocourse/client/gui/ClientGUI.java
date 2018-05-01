@@ -5,7 +5,6 @@
  */
 package cocourse.client.gui;
 
-import cocourse.Packet;
 import cocourse.client.Client;
 
 import javax.swing.*;
@@ -54,11 +53,28 @@ public class ClientGUI extends javax.swing.JFrame {
 			this.txtHighBid.setText( r ? "" + this.client.getAuction( ).getBidHigh( ).getAmount( ) : "" );
 			this.txtHighBidder.setText( r ? this.client.getAuction( ).getBidHigh( ).getUser( ) : "" );
 
+			if ( this.client.getAuction( ) != null && this.client.getAuction( ).getEnded( ) ) end( );
+
 		} );
 
 		timer.start( );
 
 		initComponents( );
+
+	}
+
+	private void end( ) {
+		timer.stop( );
+
+		this.lblTimeLeft.setText( new SimpleDateFormat( "mm:ss" ).format( this.client.getAuction( ).getEndTime( ) ) );
+
+		this.txtHighBid.setText( "" + this.client.getAuction( ).getBidHigh( ).getAmount( ) );
+		this.txtHighBidder.setText( this.client.getAuction( ).getBidHigh( ).getUser( ) );
+
+		JOptionPane.showMessageDialog( this ,
+				client.getAuction().getBidHigh().getUser().equals(client.getName()) ?
+						"You won! Congratulations" : "You lost! " + client.getAuction().getBidHigh().getUser() +" won!"
+				);
 
 	}
 

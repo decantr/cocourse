@@ -18,8 +18,6 @@ public class Client extends Thread {
 	private BufferedReader r;
 	private PrintWriter o;
 	private Auction auction;
-	private boolean running = true;
-
 
 	public Client( String name , Address ip ) {
 		this.name = name;
@@ -77,8 +75,12 @@ public class Client extends Thread {
 					case "nauc":
 						auction = null;
 						break;
+					case "end":
+						auction.setEnded();
+						break;
 					default:
 						System.out.println( p.toString( ) );
+						break;
 				}
 
 			}
@@ -94,7 +96,6 @@ public class Client extends Thread {
 	}
 
 	public boolean isRunning( ) {
-		if ( this.socket == null ) return false;
-		return running;
+		return this.socket != null;
 	}
 }

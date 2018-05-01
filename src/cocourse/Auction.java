@@ -6,7 +6,8 @@ public class Auction {
 	private String name;
 	private String desc;
 	private Bid bidHigh;
-	public boolean running = false;
+	private boolean running = false;
+	private boolean ended = false;
 	private long duration;
 
 	private long startTime;
@@ -32,6 +33,7 @@ public class Auction {
 	}
 
 	public synchronized boolean bid( Bid b ) {
+		if ( !isRunning( ) ) return false;
 		if ( b.getAmount( ) <= this.bidHigh.getAmount( ) ) return false;
 
 		this.bidHistory.add( this.bidHigh );
@@ -77,6 +79,10 @@ public class Auction {
 		this.running = true;
 	}
 
+	public void stop( ) {
+		this.running = false;
+	}
+
 	public static Auction parseAuction( Packet p ) {
 
 		String[] t = p.getContents( ).split( ";" );
@@ -98,6 +104,14 @@ public class Auction {
 				this.getBidHigh( ) + ";" +
 				this.getEndTime( ) + ";" +
 				this.isRunning( );
+	}
+
+	public void setEnded( ) {
+		this.ended = true;
+	}
+
+	public boolean getEnded( ) {
+		return this.ended;
 	}
 }
 //}
