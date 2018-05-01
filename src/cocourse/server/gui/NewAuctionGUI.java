@@ -146,7 +146,7 @@ public class NewAuctionGUI extends javax.swing.JDialog {
 		try {
 			this.auction = new Auction(
 					txtName.getText( ) , txtDesc.getText( ) ,
-					new Bid ( "" , ( Math.round(Double.parseDouble(txtBid.getText()) * 100 ) / 100 ) ),
+					new Bid ( "" , ( Math.ceil(Double.parseDouble(txtBid.getText()) * 100 ) / 100 ) ),
 					Long.parseLong( txtDuration.getText( ) )
 			);
 			this.setVisible( false );

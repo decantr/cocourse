@@ -75,6 +75,7 @@ public class Auction {
 
 	public void start( ) {
 		this.startTime = System.currentTimeMillis( );
+		System.out.println( this.duration );
 		this.endTime = this.startTime + (this.duration * 1000);
 		this.running = true;
 	}

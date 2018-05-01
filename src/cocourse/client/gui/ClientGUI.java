@@ -17,6 +17,7 @@ public class ClientGUI extends javax.swing.JFrame {
 
 	private Client client;
 	private Timer timer;
+	private boolean end;
 
 	/**
 	 * Creates new form clientfront
@@ -40,39 +41,38 @@ public class ClientGUI extends javax.swing.JFrame {
 
 			boolean r = false;
 
-			if ( this.client.getAuction( ) != null && this.client.getAuction( ).isRunning( ) )
+			if ( this.client.getAuction( ) )
 				r = true;
 
 			this.lblItemName.setText( r ? this.client.getAuction( ).getUser( ) : "No Auction" );
 			this.txtDesc.setText( r ? this.client.getAuction( ).getDesc( ) : "" );
-			this.lblTimeLeft.setText( r ?
-					new SimpleDateFormat( "mm:ss" ).format( this.client.getAuction( ).timeLeft( ) ) : "" );
+
+			if ( r && this.client.getAuction( ).isRunning( ) ) {
+				end = false;
+				r = true;
+			} else r = false;
+
+			this.lblTimeLeft.setText(
+					r ? new SimpleDateFormat( "mm:ss" ).format( this.client.getAuction( ).timeLeft( ) ) :
+							new SimpleDateFormat( "mm:ss" ).format( 0L ) );
 
 			this.txtHighBid.setText( r ? "" + this.client.getAuction( ).getBidHigh( ).getAmount( ) : "" );
 			this.txtHighBidder.setText( r ? this.client.getAuction( ).getBidHigh( ).getUser( ) : "" );
 
-			if ( this.client.getAuction( ) != null && this.client.getAuction( ).getEnded( ) ) end( );
+			if ( this.client.getAuction( ) != null && this.client.getAuction( ).getEnded( ) && !end ) {
+				end = true;
+				JOptionPane.showMessageDialog( this ,
+						client.getAuction( ).getBidHigh( ).getUser( ).equals( this.client.getUser( ) ) ?
+								"You won! Congratulations" : "You lost! " + client.getAuction( ).getBidHigh( ).getUser( ) + " won!"
+				);
+			}
+			;
 
 		} );
 
 		timer.start( );
 
 		initComponents( );
-
-	}
-
-	private void end( ) {
-		timer.stop( );
-
-		this.lblTimeLeft.setText( new SimpleDateFormat( "mm:ss" ).format( 0L ) );
-
-		this.txtHighBid.setText( "" + this.client.getAuction( ).getBidHigh( ).getAmount( ) );
-		this.txtHighBidder.setText( this.client.getAuction( ).getBidHigh( ).getUser( ) );
-
-		JOptionPane.showMessageDialog( this ,
-				client.getAuction().getBidHigh().getUser().equals(this.client.getUser()) ?
-						"You won! Congratulations" : "You lost! " + client.getAuction().getBidHigh().getUser() +" won!"
-				);
 
 	}
 
