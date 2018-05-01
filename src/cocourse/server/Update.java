@@ -10,9 +10,9 @@ public class Update extends Thread {
 	}
 
 	@Override
-	public void run(){
+	public void run( ) {
 		going = true;
-		while (going) {
+		while ( going ) {
 			try {
 				Thread.sleep( 100L );
 			} catch ( InterruptedException e ) {
@@ -20,9 +20,9 @@ public class Update extends Thread {
 			}
 
 			synchronized (s) {
-				if ( System.currentTimeMillis() < s.getAuction( ).getEndTime( )) Thread.yield( );
+				if ( System.currentTimeMillis( ) < s.getAuction( ).getEndTime( ) ) Thread.yield( );
 				else {
-					s.stopAuction();
+					s.stopAuction( );
 					going = false;
 				}
 			}

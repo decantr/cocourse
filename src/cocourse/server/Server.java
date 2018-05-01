@@ -49,31 +49,54 @@ public class Server extends Thread {
 
 		this.log = new ArrayList <>( );
 		this.log( "log" , "server created" );
-		this.log("log", ip.toString());
+		this.log( "log" , ip.toString( ) );
 
-		resetUpdater();
+		resetUpdater( );
+	}
+
+	//	method to check port availability
+	public static boolean portFree( int p ) {
+
+		ServerSocket s = null;
+
+		if ( p == 0 || (p < max && p > min) ) {
+			try {
+
+				s = new ServerSocket( p );
+				return true;
+
+			} catch ( Exception ignored ) {
+			} finally {
+				if ( s != null )
+					try {
+						s.close( );
+					} catch ( Exception ignored ) {
+					}
+			}
+		}
+		return false;
 	}
 
 	public Auction getAuction( ) {
 		return auction;
 	}
 
-	public Packet getAuctionPacket( ) {
-		return auction != null ? auction.toPacket( ) : new Packet( "nuc", "" );
-	}
-
 	public void setAuction( Auction auction ) {
 		this.auction = auction;
-		this.log("log" , "auction created");
-		this.log("log", this.auction.toString());
-		notifyClients();
+		this.log( "log" , "auction created" );
+		this.log( "log" , this.auction.toString( ) );
+		this.notifyClients( );
+	}
+
+	public Packet getAuctionPacket( ) {
+		return auction != null ? auction.toPacket( ) : new Packet( "nuc" , "" );
 	}
 
 	public void startAuction( ) {
-		this.auction.start();
-		this.notifyClients();
-		this.updater.start();
-		this.log("log", "auction started");
+		this.auction.start( );
+		this.notifyClients( );
+		this.updater.start( );
+		this.log( "log" , "auction started" );
 	}
 
 	private void resetUpdater( ) {
@@ -84,11 +107,11 @@ public class Server extends Thread {
 	}
 
 	public void stopAuction( ) {
-		this.auction.stop();
-		this.notifyClients();
-		this.notifyClients( new Packet( "end", "" ));
-		resetUpdater();
-		this.log("log", "auction ended");
+		this.auction.stop( );
+		this.notifyClients( );
+		this.notifyClients( new Packet( "end" , "" ) );
+		resetUpdater( );
+		this.log( "log" , "auction ended" );
 	}
 
 	public ArrayList <Connection> getCons( ) {
@@ -122,7 +145,7 @@ public class Server extends Thread {
 	}
 
 	public void log( String level , String contents ) {
-		this.log(new Packet( level , contents ) );
+		this.log( new Packet( level , contents ) );
 	}
 
 	@Override
@@ -130,7 +153,7 @@ public class Server extends Thread {
 
 		try {
 //      create new socket on the port passed in
-			this.sock = new ServerSocket( ip.getPort() );
+			this.sock = new ServerSocket( ip.getPort( ) );
 			this.log( "log" , "server listening on " + this.sock.getLocalPort( ) );
 			this.ip.setPort( this.sock.getLocalPort( ) );
 
@@ -146,7 +169,7 @@ public class Server extends Thread {
 				this.log( "log" , "Connected " + c.getIp( ).toString( ) );
 			}
 		} catch ( Exception e ) {
-			e.printStackTrace();
+			e.printStackTrace( );
 			System.exit( 0 );
 		} finally {
 //			try shutdown the pool and close the socket
@@ -158,31 +181,8 @@ public class Server extends Thread {
 		}
 	}
 
-	//	method to check port availability
-	public static boolean portFree( int p ) {
-
-		ServerSocket s = null;
-
-		if ( p == 0 || ( p < max && p > min )) {
-			try {
-
-				s = new ServerSocket( p );
-				return true;
-
-			} catch ( Exception ignored ) {
-			} finally {
-				if ( s != null )
-					try {
-						s.close( );
-					} catch ( Exception ignored ) {
-					}
-			}
-		}
-		return false;
-	}
-
 	public void bid( Bid bid ) {
 		auction.bid( bid );
-		notifyClients();
+		notifyClients( );
 	}
 }

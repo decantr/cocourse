@@ -16,7 +16,19 @@ import javax.swing.*;
 public class NewAuctionGUI extends javax.swing.JDialog {
 
 	private Auction auction;
-
+	// Variables declaration - do not modify//GEN-BEGIN:variables
+	private javax.swing.JButton btnCreate;
+	private javax.swing.JLabel jLabel1;
+	private javax.swing.JLabel jLabel2;
+	private javax.swing.JLabel jLabel3;
+	private javax.swing.JLabel jLabel4;
+	private javax.swing.JLabel jLabel5;
+	private javax.swing.JLabel jLabel6;
+	private javax.swing.JScrollPane jScrollPane1;
+	private javax.swing.JTextField txtBid;
+	private javax.swing.JTextArea txtDesc;
+	private javax.swing.JTextField txtDuration;
+	private javax.swing.JTextField txtName;
 	/**
 	 * Creates new form NewAuctionGUI
 	 */
@@ -28,7 +40,6 @@ public class NewAuctionGUI extends javax.swing.JDialog {
 	public Auction getAuction( ) {
 		return this.auction;
 	}
-
 
 	/**
 	 * This method is called from within the constructor to initialize the form.
@@ -146,7 +157,7 @@ public class NewAuctionGUI extends javax.swing.JDialog {
 		try {
 			this.auction = new Auction(
 					txtName.getText( ) , txtDesc.getText( ) ,
-					new Bid ( "" , ( Math.round(Double.parseDouble(txtBid.getText()) * 100 ) / 100 ) ),
+					new Bid( "" , (Math.ceil( Double.parseDouble( txtBid.getText( ) ) * 100 ) / 100) ) ,
 					Long.parseLong( txtDuration.getText( ) )
 			);
 			this.setVisible( false );
@@ -154,19 +165,5 @@ public class NewAuctionGUI extends javax.swing.JDialog {
 			JOptionPane.showMessageDialog( this , "Fields invalid" );
 		}
 	}//GEN-LAST:event_btnCreateActionPerformed
-
-	// Variables declaration - do not modify//GEN-BEGIN:variables
-	private javax.swing.JButton btnCreate;
-	private javax.swing.JLabel jLabel1;
-	private javax.swing.JLabel jLabel2;
-	private javax.swing.JLabel jLabel3;
-	private javax.swing.JLabel jLabel4;
-	private javax.swing.JLabel jLabel5;
-	private javax.swing.JLabel jLabel6;
-	private javax.swing.JScrollPane jScrollPane1;
-	private javax.swing.JTextField txtBid;
-	private javax.swing.JTextArea txtDesc;
-	private javax.swing.JTextField txtDuration;
-	private javax.swing.JTextField txtName;
 	// End of variables declaration//GEN-END:variables
 }

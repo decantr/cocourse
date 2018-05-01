@@ -73,6 +73,7 @@ public class Client extends Thread {
 				switch (p.getType( )) {
 					case "auc":
 						auction = Auction.parseAuction( p );
+						System.out.println( auction.getEndTime() );
 						break;
 					case "nauc":
 						auction = null;

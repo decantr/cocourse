@@ -18,6 +18,11 @@ public class Bid {
 		this.time = time;
 	}
 
+	public static Bid parseBid( String s ) {
+		String[] t = s.split( "&" );
+		return new Bid( t[0] , Double.parseDouble( t[1] ) , Long.parseLong( t[2] ) );
+	}
+
 	public String getUser( ) {
 		return user;
 	}
@@ -36,11 +41,6 @@ public class Bid {
 
 	public long getTime( ) {
 		return time;
-	}
-
-	public static Bid parseBid( String s ) {
-		String[] t = s.split( "&" );
-		return new Bid( t[0] , Double.parseDouble( t[1] ) , Long.parseLong( t[2] ) );
 	}
 
 	@Override

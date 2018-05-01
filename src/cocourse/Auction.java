@@ -32,6 +32,17 @@ public class Auction {
 		this.running = isrunning;
 	}
 
+	public static Auction parseAuction( Packet p ) {
+
+		String[] t = p.getContents( ).split( ";" );
+		return new Auction(
+				t[0] ,
+				t[1] ,
+				Bid.parseBid( t[2] ) ,
+				Long.parseLong( t[3] ) ,
+				Boolean.parseBoolean( t[4] ) );
+	}
+
 	public synchronized boolean bid( Bid b ) {
 		if ( !isRunning( ) ) return false;
 		if ( b.getAmount( ) <= this.bidHigh.getAmount( ) ) return false;
@@ -81,18 +92,7 @@ public class Auction {
 
 	public void stop( ) {
 		this.running = false;
-		this.setEnded();
-	}
-
-	public static Auction parseAuction( Packet p ) {
-
-		String[] t = p.getContents( ).split( ";" );
-		return new Auction(
-				t[0] ,
-				t[1] ,
-				Bid.parseBid( t[2] ) ,
-				Long.parseLong( t[3] ) ,
-				Boolean.parseBoolean( t[4] ) );
+		this.setEnded( );
 	}
 
 	public Packet toPacket( ) {
@@ -100,6 +100,7 @@ public class Auction {
 	}
 
 	public String toString( ) {
+		System.out.println( this.getEndTime() );
 		return this.getUser( ) + ";" +
 				this.getDesc( ) + ";" +
 				this.getBidHigh( ) + ";" +

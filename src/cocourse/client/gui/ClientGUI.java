@@ -17,7 +17,30 @@ public class ClientGUI extends javax.swing.JFrame {
 
 	private Client client;
 	private Timer timer;
-
+	private boolean end = false;
+	// Variables declaration - do not modify//GEN-BEGIN:variables
+	private javax.swing.JMenuItem btnOpenLog;
+	private javax.swing.JButton btnPlaceBid;
+	private javax.swing.JDialog diaLog;
+	private javax.swing.JLabel jLabel1;
+	private javax.swing.JLabel jLabel2;
+	private javax.swing.JLabel jLabel3;
+	private javax.swing.JLabel jLabel4;
+	private javax.swing.JMenu jMenu1;
+	private javax.swing.JMenu jMenu2;
+	private javax.swing.JMenuBar jMenuBar1;
+	private javax.swing.JScrollPane jScrollPane1;
+	private javax.swing.JScrollPane jScrollPane2;
+	private javax.swing.JSeparator jSeparator1;
+	private javax.swing.JTextArea jTextArea1;
+	private javax.swing.JTextField jTextField1;
+	private javax.swing.JLabel lblCurrentTime;
+	private javax.swing.JLabel lblItemName;
+	private javax.swing.JLabel lblTime;
+	private javax.swing.JLabel lblTimeLeft;
+	private javax.swing.JTextArea txtDesc;
+	private javax.swing.JTextField txtHighBid;
+	private javax.swing.JTextField txtHighBidder;
 	/**
 	 * Creates new form clientfront
 	 */
@@ -40,19 +63,34 @@ public class ClientGUI extends javax.swing.JFrame {
 
 			boolean r = false;
 
-			if ( this.client.getAuction( ) != null && this.client.getAuction( ).isRunning( ) )
+			if ( this.client.getAuction( ) != null)
 				r = true;
 
 			this.lblItemName.setText( r ? this.client.getAuction( ).getUser( ) : "No Auction" );
 			this.txtDesc.setText( r ? this.client.getAuction( ).getDesc( ) : "" );
-			this.lblTimeLeft.setText( r ?
-					new SimpleDateFormat( "mm:ss" ).format( this.client.getAuction( ).timeLeft( ) ) : "" );
 
+			if ( r && this.client.getAuction( ).isRunning( ) ) {
+				end = false;
+				r = true;
+				System.out.println( System.currentTimeMillis() + " " + this.client.getAuction( ).timeLeft( ) );
+				System.out.println( new SimpleDateFormat( "mm:ss" ).format(System.currentTimeMillis() )
+						+ " " + new SimpleDateFormat( "mm:ss" ).format(this.client.getAuction( ).timeLeft( ) ));
+				System.out.println( client.getAuction().timeLeft() );
+			} else r = false;
+
+
+			this.lblTimeLeft.setText( r ?
+					new SimpleDateFormat( "mm:ss" ).format( this.client.getAuction( ).timeLeft( ) ) : new SimpleDateFormat( "mm:ss" ).format( 0L ) );
 			this.txtHighBid.setText( r ? "" + this.client.getAuction( ).getBidHigh( ).getAmount( ) : "" );
 			this.txtHighBidder.setText( r ? this.client.getAuction( ).getBidHigh( ).getUser( ) : "" );
 
-			if ( this.client.getAuction( ) != null && this.client.getAuction( ).getEnded( ) ) end( );
-
+			if ( this.client.getAuction( ) != null && this.client.getAuction( ).getEnded( ) && !end) {
+				JOptionPane.showMessageDialog( this ,
+						client.getAuction( ).getBidHigh( ).getUser( ).equals( this.client.getUser( ) ) ?
+								"You won! Congratulations" : "You lost! " + client.getAuction( ).getBidHigh( ).getUser( ) + " won!"
+				);
+				end = true;
+			}
 		} );
 
 		timer.start( );
@@ -61,19 +99,44 @@ public class ClientGUI extends javax.swing.JFrame {
 
 	}
 
-	private void end( ) {
-		timer.stop( );
+	/**
+	 * @param args the command line arguments
+	 */
+	public static void main( String args[] ) {
+		/* Set the Nimbus look and feel */
+		//<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+		/* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+		 * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+		 */
+		try {
+			for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels( ) ) {
+				if ( "Nimbus".equals( info.getName( ) ) ) {
+					javax.swing.UIManager.setLookAndFeel( info.getClassName( ) );
+					break;
+				}
+			}
+		} catch ( ClassNotFoundException ex ) {
+			java.util.logging.Logger.getLogger( ClientGUI.class.getName( ) )
+					.log( java.util.logging.Level.SEVERE , null , ex );
+		} catch ( InstantiationException ex ) {
+			java.util.logging.Logger.getLogger( ClientGUI.class.getName( ) )
+					.log( java.util.logging.Level.SEVERE , null , ex );
+		} catch ( IllegalAccessException ex ) {
+			java.util.logging.Logger.getLogger( ClientGUI.class.getName( ) )
+					.log( java.util.logging.Level.SEVERE , null , ex );
+		} catch ( javax.swing.UnsupportedLookAndFeelException ex ) {
+			java.util.logging.Logger.getLogger( ClientGUI.class.getName( ) )
+					.log( java.util.logging.Level.SEVERE , null , ex );
+		}
+		//</editor-fold>
+		//</editor-fold>
 
-		this.lblTimeLeft.setText( new SimpleDateFormat( "mm:ss" ).format( 0L ) );
-
-		this.txtHighBid.setText( "" + this.client.getAuction( ).getBidHigh( ).getAmount( ) );
-		this.txtHighBidder.setText( this.client.getAuction( ).getBidHigh( ).getUser( ) );
-
-		JOptionPane.showMessageDialog( this ,
-				client.getAuction().getBidHigh().getUser().equals(this.client.getUser()) ?
-						"You won! Congratulations" : "You lost! " + client.getAuction().getBidHigh().getUser() +" won!"
-				);
-
+		/* Create and display the form */
+		java.awt.EventQueue.invokeLater( new Runnable( ) {
+			public void run( ) {
+				new ClientGUI( ).setVisible( true );
+			}
+		} );
 	}
 
 	/**
@@ -278,69 +341,5 @@ public class ClientGUI extends javax.swing.JFrame {
 	private void btnOpenLogActionPerformed( java.awt.event.ActionEvent evt ) {//GEN-FIRST:event_btnOpenLogActionPerformed
 		// TODO add your handling code here:
 	}//GEN-LAST:event_btnOpenLogActionPerformed
-
-	/**
-	 * @param args the command line arguments
-	 */
-	public static void main( String args[] ) {
-		/* Set the Nimbus look and feel */
-		//<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-		/* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-		 * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-		 */
-		try {
-			for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels( ) ) {
-				if ( "Nimbus".equals( info.getName( ) ) ) {
-					javax.swing.UIManager.setLookAndFeel( info.getClassName( ) );
-					break;
-				}
-			}
-		} catch ( ClassNotFoundException ex ) {
-			java.util.logging.Logger.getLogger( ClientGUI.class.getName( ) )
-					.log( java.util.logging.Level.SEVERE , null , ex );
-		} catch ( InstantiationException ex ) {
-			java.util.logging.Logger.getLogger( ClientGUI.class.getName( ) )
-					.log( java.util.logging.Level.SEVERE , null , ex );
-		} catch ( IllegalAccessException ex ) {
-			java.util.logging.Logger.getLogger( ClientGUI.class.getName( ) )
-					.log( java.util.logging.Level.SEVERE , null , ex );
-		} catch ( javax.swing.UnsupportedLookAndFeelException ex ) {
-			java.util.logging.Logger.getLogger( ClientGUI.class.getName( ) )
-					.log( java.util.logging.Level.SEVERE , null , ex );
-		}
-		//</editor-fold>
-		//</editor-fold>
-
-		/* Create and display the form */
-		java.awt.EventQueue.invokeLater( new Runnable( ) {
-			public void run( ) {
-				new ClientGUI( ).setVisible( true );
-			}
-		} );
-	}
-
-	// Variables declaration - do not modify//GEN-BEGIN:variables
-	private javax.swing.JMenuItem btnOpenLog;
-	private javax.swing.JButton btnPlaceBid;
-	private javax.swing.JDialog diaLog;
-	private javax.swing.JLabel jLabel1;
-	private javax.swing.JLabel jLabel2;
-	private javax.swing.JLabel jLabel3;
-	private javax.swing.JLabel jLabel4;
-	private javax.swing.JMenu jMenu1;
-	private javax.swing.JMenu jMenu2;
-	private javax.swing.JMenuBar jMenuBar1;
-	private javax.swing.JScrollPane jScrollPane1;
-	private javax.swing.JScrollPane jScrollPane2;
-	private javax.swing.JSeparator jSeparator1;
-	private javax.swing.JTextArea jTextArea1;
-	private javax.swing.JTextField jTextField1;
-	private javax.swing.JLabel lblCurrentTime;
-	private javax.swing.JLabel lblItemName;
-	private javax.swing.JLabel lblTime;
-	private javax.swing.JLabel lblTimeLeft;
-	private javax.swing.JTextArea txtDesc;
-	private javax.swing.JTextField txtHighBid;
-	private javax.swing.JTextField txtHighBidder;
 	// End of variables declaration//GEN-END:variables
 }

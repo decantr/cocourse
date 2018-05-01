@@ -16,6 +16,13 @@ import javax.swing.*;
 public class NewServerGUI extends javax.swing.JDialog {
 
 	private Server s;
+	// Variables declaration - do not modify//GEN-BEGIN:variables
+	private javax.swing.JButton btnClose;
+	private javax.swing.JButton btnNew;
+	private javax.swing.JPanel jPanel1;
+	private javax.swing.JLabel lblGreeter;
+	private javax.swing.JLabel lblGreeter1;
+	private javax.swing.JTextField txtPort;
 
 	/**
 	 * Creates new form diaNew
@@ -152,13 +159,5 @@ public class NewServerGUI extends javax.swing.JDialog {
 	void fillGreeter( ) {
 		lblGreeter.setText( "There is already a server running" );
 	}
-
-	// Variables declaration - do not modify//GEN-BEGIN:variables
-	private javax.swing.JButton btnClose;
-	private javax.swing.JButton btnNew;
-	private javax.swing.JPanel jPanel1;
-	private javax.swing.JLabel lblGreeter;
-	private javax.swing.JLabel lblGreeter1;
-	private javax.swing.JTextField txtPort;
 	// End of variables declaration//GEN-END:variables
 }
