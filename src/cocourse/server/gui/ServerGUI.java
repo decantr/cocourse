@@ -35,6 +35,7 @@ public class ServerGUI extends javax.swing.JFrame {
 			server = d.getServer( );
 		}
 
+		server.setDaemon( true );
 		server.start( );
 
 

@@ -29,6 +29,8 @@ public class ClientGUI extends javax.swing.JFrame {
 
 		if ( client == null ) System.exit( 0 );
 
+		client.setDaemon( true );
+
 		try {
 			Thread.sleep( 1000L );
 		} catch ( InterruptedException e ) {
