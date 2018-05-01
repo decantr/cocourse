@@ -15,6 +15,7 @@ public class Connection implements Runnable {
 	private Server s;
 	private BufferedReader r;
 	private PrintWriter o;
+	private boolean run;
 
 	private Address ip;
 
@@ -25,10 +26,15 @@ public class Connection implements Runnable {
 				i.getInetAddress( ).getHostName( ) ,
 				i.getInetAddress( ).getHostAddress( ) ,
 				i.getLocalPort( ) );
+		this.run = true;
 	}
 
 	public void sendPacket( Packet packet ) {
 		this.o.println( packet );
+	}
+
+	public void shutdown(  ) {
+		this.run = false;
 	}
 
 	@Override
@@ -43,10 +49,12 @@ public class Connection implements Runnable {
 			sendPacket( new Packet(
 					"log" , "connected " + s.getIp( ).toString( ) ) );
 
+
+
 //			get auction info
 			sendPacket( s.getAuctionPacket( ) );
 
-			while ( true ) {
+			while ( run ) {
 
 				String t = r.readLine( );
 
@@ -57,7 +65,6 @@ public class Connection implements Runnable {
 				switch (p.getType( )) {
 					case "get":
 						sendPacket( s.getAuctionPacket( ) );
-						s.log( p );
 						break;
 					case "bid":
 						s.bid( Bid.parseBid( p.getContents( ) ) );
@@ -67,7 +74,6 @@ public class Connection implements Runnable {
 						s.log( p );
 						break;
 					default:
-						System.out.println( p.toString( ) );
 						s.log( p );
 						break;
 				}
@@ -76,8 +82,8 @@ public class Connection implements Runnable {
 		} catch ( Exception e ) {
 			e.printStackTrace( );
 		} finally {
+			s.log( "log" , "Disconnected" + ip.toString( ) );
 			try {
-				s.log( "log" , ip.toString( ) + ":closed" );
 				r.close( );
 				o.close( );
 				i.close( );

@@ -18,14 +18,12 @@ public class Client extends Thread {
 	private BufferedReader r;
 	private PrintWriter o;
 	private Auction auction;
+	private boolean run;
 
 	public Client( String user , Address ip ) {
 		this.user = user;
 		this.ip = ip;
-	}
-
-	public Client( String hostname , int port ) {
-		this.ip = new Address( hostname.equals( "" ) ? "127.0.0.1" : hostname , "" , port );
+		this.run = true;
 	}
 
 	public Auction getAuction( ) {
@@ -52,6 +50,11 @@ public class Client extends Thread {
 		o.println( packet );
 	}
 
+	public void shutdown(  ) {
+		run = false;
+		this.interrupt();
+	}
+
 	public void run( ) {
 		try {
 			socket = new Socket( this.ip.getIp( ) , this.ip.getPort( ) );
@@ -59,10 +62,9 @@ public class Client extends Thread {
 			r = new BufferedReader( new InputStreamReader( socket.getInputStream( ) ) );
 			o = new PrintWriter( socket.getOutputStream( ) , true );
 
-			sendPacket( new Packet( "log" , ip.toString( ) ) );
 			sendPacket( new Packet( "get", "" ) );
 
-			while ( true ) {
+			while ( run ) {
 
 				String t = r.readLine( );
 
@@ -74,20 +76,18 @@ public class Client extends Thread {
 					case "auc":
 						auction = Auction.parseAuction( p );
 						break;
-					case "nauc":
+					case "nuc":
 						auction = null;
 						break;
 					case "end":
 						auction.setEnded();
 						break;
 					default:
-						System.out.println( p.toString( ) );
 						break;
 				}
 
 			}
-		} catch ( Exception e ) {
-			e.printStackTrace( );
+		} catch ( Exception ignored ) {
 		} finally {
 			try {
 				socket.close( );

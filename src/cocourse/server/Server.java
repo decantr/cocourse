@@ -146,8 +146,7 @@ public class Server extends Thread {
 				this.log( "log" , "Connected " + c.getIp( ).toString( ) );
 			}
 		} catch ( Exception e ) {
-			e.printStackTrace();
-			System.exit( 0 );
+			log( "log" , "Disconnected" + ip.toString( ) );
 		} finally {
 //			try shutdown the pool and close the socket
 			try {
@@ -181,7 +180,7 @@ public class Server extends Thread {
 		return false;
 	}
 
-	public void bid( Bid bid ) {
+	public synchronized void bid( Bid bid ) {
 		auction.bid( bid );
 		notifyClients();
 	}
