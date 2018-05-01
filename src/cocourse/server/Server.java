@@ -51,9 +51,7 @@ public class Server extends Thread {
 		this.log( "log" , "server created" );
 		this.log("log", ip.toString());
 
-		updater = new Update( this );
-		updater.setDaemon( true );
-		updater.setPriority( Thread.MIN_PRIORITY );
+		resetUpdater();
 	}
 
 	public Auction getAuction( ) {
@@ -74,14 +72,22 @@ public class Server extends Thread {
 	public void startAuction( ) {
 		this.auction.start();
 		this.notifyClients();
-		updater.start();
+		this.updater.start();
 		this.log("log", "auction started");
+	}
+
+	private void resetUpdater( ) {
+		updater = null;
+		updater = new Update( this );
+		updater.setDaemon( true );
+		updater.setPriority( Thread.MIN_PRIORITY );
 	}
 
 	public void stopAuction( ) {
 		this.auction.stop();
 		this.notifyClients();
 		this.notifyClients( new Packet( "end", "" ));
+		resetUpdater();
 		this.log("log", "auction ended");
 	}
 

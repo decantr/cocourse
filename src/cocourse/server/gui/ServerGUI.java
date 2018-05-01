@@ -56,7 +56,7 @@ public class ServerGUI extends javax.swing.JFrame {
 
 					this.txtHighestBidder.setText( this.server.getAuction( ).getBidHigh( ).getUser( ) );
 				}
-				if ( this.server.getAuction( ) != null && this.server.getAuction( ).getEnded( ) && !end) end( );
+				if ( this.server.getAuction( ) != null && this.server.getAuction( ).getEnded( ) && !end ) end( );
 			}
 
 		} );
@@ -180,11 +180,11 @@ public class ServerGUI extends javax.swing.JFrame {
 								.addPreferredGap( javax.swing.LayoutStyle.ComponentPlacement.UNRELATED )
 								.addGroup( pnlInfoLayout.createParallelGroup( javax.swing.GroupLayout.Alignment.LEADING , false )
 										.addGroup( pnlInfoLayout.createSequentialGroup( )
-												.addComponent( txtHighestBid , javax.swing.GroupLayout.PREFERRED_SIZE , 38 , javax.swing.GroupLayout.PREFERRED_SIZE )
+												.addComponent( txtHighestBid , javax.swing.GroupLayout.PREFERRED_SIZE , 63 , javax.swing.GroupLayout.PREFERRED_SIZE )
 												.addPreferredGap( javax.swing.LayoutStyle.ComponentPlacement.RELATED )
 												.addComponent( lblTimeLeft )
 												.addPreferredGap( javax.swing.LayoutStyle.ComponentPlacement.RELATED )
-												.addComponent( txtTimeLeft , javax.swing.GroupLayout.PREFERRED_SIZE , 76 , javax.swing.GroupLayout.PREFERRED_SIZE ) )
+												.addComponent( txtTimeLeft , javax.swing.GroupLayout.PREFERRED_SIZE , 51 , javax.swing.GroupLayout.PREFERRED_SIZE ) )
 										.addComponent( btnStartAuction )
 										.addComponent( txtHighestBidder )
 										.addComponent( txtAuctionName ) )
@@ -316,7 +316,7 @@ public class ServerGUI extends javax.swing.JFrame {
 				layout.createParallelGroup( javax.swing.GroupLayout.Alignment.LEADING )
 						.addGroup( javax.swing.GroupLayout.Alignment.TRAILING , layout.createSequentialGroup( )
 								.addContainerGap( )
-								.addComponent( jPanel2 , javax.swing.GroupLayout.PREFERRED_SIZE , 390 , Short.MAX_VALUE ) )
+								.addComponent( jPanel2 , javax.swing.GroupLayout.DEFAULT_SIZE , 390 , Short.MAX_VALUE ) )
 		);
 
 		pack( );
